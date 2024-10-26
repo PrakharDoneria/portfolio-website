@@ -1,3 +1,10 @@
+const cursor = document.querySelector('.cursor');
+const scrollContainer = document.querySelector('.vertical-scroll-container');
+const projectList = document.getElementById('project-list');
+const scrollLeftButton = document.getElementById('prev');
+const scrollRightButton = document.getElementById('next');
+const scrollAmount = 300;
+
 async function fetchProjects() {
     const response = await fetch('https://api.github.com/users/PrakharDoneria/repos');
     const projects = await response.json();
@@ -6,9 +13,7 @@ async function fetchProjects() {
 }
 
 function displayProjects(projects) {
-    const projectList = document.getElementById('project-list');
     projectList.innerHTML = '';
-
     projects.forEach(project => {
         const projectItem = document.createElement('div');
         projectItem.className = 'project-item';
@@ -19,52 +24,37 @@ function displayProjects(projects) {
         `;
         projectList.appendChild(projectItem);
     });
+}
 
-    const scrollLeftButton = document.getElementById('prev');
-    const scrollRightButton = document.getElementById('next');
-    const scrollContainer = document.querySelector('.horizontal-scroll-container');
-
-    scrollLeftButton.addEventListener('click', () => {
-        scrollContainer.scrollBy({ left: -300, behavior: 'smooth' });
-    });
-
-    scrollRightButton.addEventListener('click', () => {
-        scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
+function handleScroll(direction) {
+    scrollContainer.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
     });
 }
+
+scrollLeftButton.addEventListener('click', () => handleScroll(-1));
+scrollRightButton.addEventListener('click', () => handleScroll(1));
 
 fetchProjects();
 
 document.addEventListener('mousemove', (e) => {
-    const x = e.clientX;
-    const y = e.clientY;
+    cursor.style.left = `${e.clientX}px`;
+    cursor.style.top = `${e.clientY}px`;
 
     const glow = document.createElement('div');
     glow.className = 'cursor-glow';
-    glow.style.left = x + 'px';
-    glow.style.top = y + 'px';
-
+    glow.style.left = `${e.clientX}px`;
+    glow.style.top = `${e.clientY}px`;
     document.body.appendChild(glow);
-
-    setTimeout(() => {
-        glow.remove();
-    }, 1000);
+    
+    setTimeout(() => glow.remove(), 1000);
 });
 
 document.querySelectorAll('.header-button').forEach(button => {
     button.addEventListener('click', (e) => {
         e.preventDefault();
         const targetId = button.getAttribute('href').substring(1);
-        const targetSection = document.querySelector(`#${targetId}`);
-        targetSection.scrollIntoView({ behavior: 'smooth' });
+        document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
     });
-});
-const cursor = document.querySelector('.cursor');
-
-document.addEventListener('mousemove', (e) => {
-    const x = e.pageX;
-    const y = e.pageY;
-
-    cursor.style.left = `${x}px`;
-    cursor.style.top = `${y}px`;
 });

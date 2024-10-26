@@ -44,7 +44,7 @@ body {
 }
 
 .header-content h1 {
-    font-size: 64px;
+    font-size: 4rem;
     margin-bottom: 20px;
     background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
     -webkit-background-clip: text;
@@ -54,7 +54,7 @@ body {
 }
 
 .header-content p {
-    font-size: 20px;
+    font-size: 1.25rem;
     margin-bottom: 40px;
     color: rgba(255, 255, 255, 0.8);
     letter-spacing: 1px;
@@ -64,6 +64,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .header-button {
@@ -185,9 +186,10 @@ body {
     box-shadow: 0 0 30px rgba(0, 243, 255, 0.5);
     transform: translateY(-5px);
 }
+
 .cursor {
     position: fixed;
-    width: 20px; /* Base size of the cursor */
+    width: 20px;
     height: 20px;
     border-radius: 50%;
     pointer-events: none;
@@ -196,14 +198,13 @@ body {
     background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
     box-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
     transition: transform 0.3s ease;
-    animation: gradient-flow 3s ease infinite; /* Add gradient flow animation */
+    animation: gradient-flow 3s ease infinite;
 }
 
 .cursor:hover {
-    transform: scale(1.5); /* Scale up on hover */
+    transform: scale(1.5);
 }
 
-/* Keyframes for gradient flow animation */
 @keyframes gradient-flow {
     0% {
         background-position: 0% 50%;
@@ -212,6 +213,7 @@ body {
         background-position: 100% 50%;
     }
 }
+
 .contact a {
     color: var(--neon-blue);
     text-decoration: none;
@@ -239,4 +241,56 @@ body {
 .contact a:hover::after {
     width: 100%;
     left: 0;
+}
+
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 3rem;
+    }
+
+    .header-content p {
+        font-size: 1rem;
+    }
+
+    .header-button {
+        padding: 10px 20px;
+    }
+
+    .project-card {
+        padding: 15px;
+    }
+
+    .project-item {
+        min-width: 250px;
+    }
+
+    .view-project {
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .header-content p {
+        font-size: 0.9rem;
+    }
+
+    .header-button {
+        padding: 8px 15px;
+    }
+
+    .project-card {
+        padding: 10px;
+    }
+
+    .project-item {
+        min-width: 200px;
+    }
+
+    .view-project {
+        padding: 6px 12px;
+    }
 }
