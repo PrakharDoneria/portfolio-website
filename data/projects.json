@@ -1,0 +1,34 @@
+[
+  {
+    "title": "AI-Powered Financial Analysis",
+    "description": "Developed a machine learning platform that analyzes financial data to predict market trends with 92% accuracy. Used Python, TensorFlow, and React for the user interface.",
+    "image": "assets/images/project-finance.jpg",
+    "technologies": ["Python", "TensorFlow", "Flask", "React", "AWS"],
+    "demoLink": "https://github.com/prakhardoneria",
+    "githubLink": "https://github.com/prakhardoneria"
+  },
+  {
+    "title": "Blockchain Integration Platform",
+    "description": "Created a secure platform that enables businesses to integrate blockchain technologies into their existing infrastructure. Built with Solidity, Node.js, and React.",
+    "image": "assets/images/project-blockchain.jpg",
+    "technologies": ["Solidity", "Node.js", "React", "Web3.js", "MongoDB"],
+    "demoLink": "https://github.com/prakhardoneria",
+    "githubLink": "https://github.com/prakhardoneria"
+  },
+  {
+    "title": "E-Commerce Microservices",
+    "description": "Designed and implemented a microservices architecture for e-commerce platforms that improved scalability and reduced server load by 60%. Built with Node.js, Docker, and Kubernetes.",
+    "image": "assets/images/project-ecommerce.jpg",
+    "technologies": ["Node.js", "Docker", "Kubernetes", "MongoDB", "Redis"],
+    "demoLink": "https://github.com/prakhardoneria",
+    "githubLink": "https://github.com/prakhardoneria"
+  },
+  {
+    "title": "Healthcare Data Platform",
+    "description": "Built a HIPAA-compliant platform for healthcare providers to securely share and analyze patient data across institutions. Used Python, Django, and React.",
+    "image": "assets/images/project-healthcare.jpg",
+    "technologies": ["Python", "Django", "React", "PostgreSQL", "AWS"],
+    "demoLink": "https://github.com/prakhardoneria",
+    "githubLink": "https://github.com/prakhardoneria"
+  }
+]
