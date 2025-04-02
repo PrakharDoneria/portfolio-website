@@ -290,80 +290,177 @@ function initProjectsAnimation() {
 }
 
 function createProjectsGrid() {
-  // Create a grid of cubes
-  const gridSize = 5;
-  const spacing = 1.5;
+  // Create a more tech-focused 3D visualization that represents mobile & web apps
+  const projectCount = 6; // Match real project count
   
-  for (let x = -gridSize/2; x < gridSize/2; x++) {
-    for (let z = -gridSize/2; z < gridSize/2; z++) {
-      // Skip some cubes randomly for a more interesting pattern
-      if (Math.random() < 0.7) {
-        const height = Math.random() * 2 + 0.1;
-        
-        // Create a box geometry
-        const geometry = new THREE.BoxGeometry(0.5, height, 0.5);
-        
-        // Determine color based on position
-        const hue = ((x + gridSize/2) / gridSize) * 0.5 + 
-                   ((z + gridSize/2) / gridSize) * 0.5;
-        const color = new THREE.Color().setHSL(hue, 0.8, 0.5);
-        
-        // Create material
-        const material = new THREE.MeshPhongMaterial({
-          color: color,
-          transparent: true,
-          opacity: 0.8,
-          shininess: 30
-        });
-        
-        // Create mesh
-        const cube = new THREE.Mesh(geometry, material);
-        
-        // Position cube in grid
-        cube.position.set(x * spacing, height/2, z * spacing);
-        
-        // Add animation properties
-        cube.userData = {
-          initialHeight: height,
-          pulseSpeed: Math.random() * 2 + 1,
-          pulseAmount: Math.random() * 0.5 + 0.5
-        };
-        
-        projectsGroup.add(cube);
-      }
-    }
-  }
+  // Create a hexagonal arrangement for the projects
+  const radius = 5;
+  const mainColors = [
+    0x00bcd4, // DevBytes - Cyan
+    0xff9800, // TrackTik - Orange
+    0xe91e63, // SunoSynth - Pink
+    0x4caf50, // VerboVisions - Green  
+    0x3f51b5, // HTML Editor PRO - Indigo
+    0x9c27b0  // PizzaVerse - Purple
+  ];
   
-  // Add connecting lines
-  const lineMaterial = new THREE.LineBasicMaterial({
+  // Add a central node representing the portfolio
+  const centralGeometry = new THREE.SphereGeometry(0.7, 32, 32);
+  const centralMaterial = new THREE.MeshPhongMaterial({
     color: 0xffffff,
+    emissive: 0x222222,
     transparent: true,
-    opacity: 0.2
+    opacity: 0.9,
+    shininess: 100
   });
   
-  // Create horizontal grid lines
-  for (let x = -gridSize/2; x <= gridSize/2; x++) {
+  const centralNode = new THREE.Mesh(centralGeometry, centralMaterial);
+  centralNode.position.set(0, 0, 0);
+  
+  // Add animation properties
+  centralNode.userData = {
+    type: 'central',
+    pulseSpeed: 1.5,
+    pulseAmount: 0.2
+  };
+  
+  projectsGroup.add(centralNode);
+  
+  // Create different geometry types for variety
+  const geometryTypes = [
+    new THREE.OctahedronGeometry(0.5, 0), // DevBytes - AI
+    new THREE.CylinderGeometry(0.5, 0.5, 0.5, 16), // TrackTik - Mobile app
+    new THREE.DodecahedronGeometry(0.5, 0), // SunoSynth - Music
+    new THREE.IcosahedronGeometry(0.5, 0), // VerboVisions - Image Generation
+    new THREE.BoxGeometry(0.5, 0.5, 0.5), // HTML Editor - code blocks
+    new THREE.TorusGeometry(0.4, 0.2, 16, 16) // PizzaVerse - restaurant
+  ];
+  
+  // Create project nodes arranged in a circle
+  for (let i = 0; i < projectCount; i++) {
+    const angle = (i / projectCount) * Math.PI * 2;
+    
+    // Create geometry based on project type
+    const geometry = geometryTypes[i];
+    
+    // Create material with project-specific color
+    const material = new THREE.MeshPhongMaterial({
+      color: mainColors[i],
+      emissive: 0x111111,
+      transparent: true,
+      opacity: 0.8,
+      shininess: 80
+    });
+    
+    // Create mesh
+    const node = new THREE.Mesh(geometry, material);
+    
+    // Position in circle around center
+    node.position.x = Math.cos(angle) * radius;
+    node.position.z = Math.sin(angle) * radius;
+    node.position.y = Math.sin(angle + Date.now() * 0.001) * 0.5;
+    
+    // Add animation properties
+    node.userData = {
+      index: i,
+      angle: angle,
+      baseY: node.position.y,
+      pulseSpeed: 0.5 + Math.random() * 1.5,
+      orbitSpeed: 0.2 + Math.random() * 0.3,
+      orbitRadius: radius,
+      rotationSpeed: {
+        x: Math.random() * 0.02,
+        y: Math.random() * 0.02,
+        z: Math.random() * 0.02
+      }
+    };
+    
+    projectsGroup.add(node);
+    
+    // Create connecting line to central node
+    const lineMaterial = new THREE.LineBasicMaterial({
+      color: mainColors[i],
+      transparent: true,
+      opacity: 0.4
+    });
+    
     const lineGeometry = new THREE.BufferGeometry();
     const points = [
-      new THREE.Vector3(x * spacing, 0.1, -gridSize/2 * spacing),
-      new THREE.Vector3(x * spacing, 0.1, gridSize/2 * spacing)
+      new THREE.Vector3(0, 0, 0), // Central node
+      node.position // Project node
     ];
     lineGeometry.setFromPoints(points);
+    
     const line = new THREE.Line(lineGeometry, lineMaterial);
+    line.userData = {
+      startIndex: -1, // Central node
+      endIndex: i,
+      startNode: centralNode,
+      endNode: node
+    };
+    
     projectsGroup.add(line);
   }
   
-  // Create vertical grid lines
-  for (let z = -gridSize/2; z <= gridSize/2; z++) {
-    const lineGeometry = new THREE.BufferGeometry();
-    const points = [
-      new THREE.Vector3(-gridSize/2 * spacing, 0.1, z * spacing),
-      new THREE.Vector3(gridSize/2 * spacing, 0.1, z * spacing)
-    ];
-    lineGeometry.setFromPoints(points);
-    const line = new THREE.Line(lineGeometry, lineMaterial);
-    projectsGroup.add(line);
+  // Add data flow particles along the connections
+  const particlesCount = 50;
+  const particlesGeometry = new THREE.BufferGeometry();
+  const particlesPositions = new Float32Array(particlesCount * 3);
+  const particlesSizes = new Float32Array(particlesCount);
+  const particlesColors = new Float32Array(particlesCount * 3);
+  const particlesData = [];
+  
+  for (let i = 0; i < particlesCount; i++) {
+    // Assign each particle to a connection
+    const connectionIndex = Math.floor(Math.random() * projectCount);
+    const angle = (connectionIndex / projectCount) * Math.PI * 2;
+    
+    // Calculate position along the connection line
+    const t = Math.random(); // Position along the line (0-1)
+    const x = t * Math.cos(angle) * radius;
+    const z = t * Math.sin(angle) * radius;
+    const y = t * 0.5 * Math.sin(angle);
+    
+    particlesPositions[i * 3] = x;
+    particlesPositions[i * 3 + 1] = y;
+    particlesPositions[i * 3 + 2] = z;
+    
+    // Random size for each particle
+    particlesSizes[i] = Math.random() * 0.05 + 0.02;
+    
+    // Get color from main colors array
+    const color = new THREE.Color(mainColors[connectionIndex]);
+    particlesColors[i * 3] = color.r;
+    particlesColors[i * 3 + 1] = color.g;
+    particlesColors[i * 3 + 2] = color.b;
+    
+    // Store particle data for animation
+    particlesData.push({
+      connectionIndex: connectionIndex,
+      position: t,
+      speed: Math.random() * 0.01 + 0.005
+    });
   }
+  
+  particlesGeometry.setAttribute('position', new THREE.BufferAttribute(particlesPositions, 3));
+  particlesGeometry.setAttribute('size', new THREE.BufferAttribute(particlesSizes, 1));
+  particlesGeometry.setAttribute('color', new THREE.BufferAttribute(particlesColors, 3));
+  
+  // Create shader material for particles
+  const particlesMaterial = new THREE.PointsMaterial({
+    size: 0.1,
+    transparent: true,
+    opacity: 0.8,
+    vertexColors: true,
+    blending: THREE.AdditiveBlending
+  });
+  
+  const particles = new THREE.Points(particlesGeometry, particlesMaterial);
+  particles.userData = {
+    particlesData: particlesData
+  };
+  
+  projectsGroup.add(particles);
 }
 
 function animateProjects() {
@@ -372,31 +469,96 @@ function animateProjects() {
   if (projectsAnimating && projectsScene && projectsRenderer) {
     const time = Date.now() * 0.001;
     
-    // Rotate the entire grid slowly
-    projectsGroup.rotation.y = Math.sin(time * 0.2) * 0.3;
+    // Rotate the entire group slowly
+    projectsGroup.rotation.y = time * 0.1;
     
-    // Animate each cube
     projectsGroup.children.forEach(child => {
       if (child.type === 'Mesh' && child.userData) {
-        const { initialHeight, pulseSpeed, pulseAmount } = child.userData;
-        const newHeight = initialHeight + Math.sin(time * pulseSpeed) * pulseAmount;
-        
-        // Scale the height
-        child.scale.y = newHeight / initialHeight;
-        
-        // Also adjust y position to keep the bottom at ground level
-        child.position.y = (newHeight / 2);
-        
-        // Subtle color shift
-        if (child.material && child.material.color) {
-          const hue = (child.position.x + child.position.z + time * 0.1) % 1;
-          child.material.color.setHSL(hue, 0.8, 0.5);
+        // Central node animation
+        if (child.userData.type === 'central') {
+          const scale = 1 + Math.sin(time * child.userData.pulseSpeed) * child.userData.pulseAmount;
+          child.scale.set(scale, scale, scale);
+          
+          // Make the central node glow/pulse
+          if (child.material) {
+            const emissive = 0.1 + Math.abs(Math.sin(time * 0.5)) * 0.2;
+            child.material.emissive.setRGB(emissive, emissive, emissive);
+          }
+        } 
+        // Project node animations
+        else if (child.userData.index !== undefined) {
+          // Update node position in orbit
+          const { index, angle, pulseSpeed, orbitSpeed, orbitRadius, rotationSpeed } = child.userData;
+          
+          // Rotate each object on its own axis
+          child.rotation.x += rotationSpeed.x;
+          child.rotation.y += rotationSpeed.y;
+          child.rotation.z += rotationSpeed.z;
+          
+          // Update orbit position
+          const orbitAngle = angle + time * orbitSpeed;
+          child.position.x = Math.cos(orbitAngle) * orbitRadius;
+          child.position.z = Math.sin(orbitAngle) * orbitRadius;
+          
+          // Vertical bobbing motion
+          child.position.y = Math.sin(time * pulseSpeed) * 0.5;
+          
+          // Update connecting lines
+          projectsGroup.children.forEach(line => {
+            if (line.type === 'Line' && line.userData && line.userData.endIndex === index) {
+              // Update the line points
+              const startPoint = new THREE.Vector3(0, 0, 0);
+              const endPoint = child.position.clone();
+              
+              const lineGeometry = new THREE.BufferGeometry();
+              lineGeometry.setFromPoints([startPoint, endPoint]);
+              line.geometry.dispose();
+              line.geometry = lineGeometry;
+            }
+          });
         }
+      }
+      // Update particle animation
+      else if (child.type === 'Points' && child.userData && child.userData.particlesData) {
+        const positions = child.geometry.attributes.position.array;
+        const particlesData = child.userData.particlesData;
+        
+        // Update each particle
+        for (let i = 0; i < particlesData.length; i++) {
+          const particle = particlesData[i];
+          
+          // Update particle position
+          particle.position += particle.speed;
+          
+          // Reset particle position when it reaches the end
+          if (particle.position > 1) {
+            particle.position = 0;
+            particle.connectionIndex = Math.floor(Math.random() * 6); // Choose a random connection
+          }
+          
+          // Calculate new position along the connection line
+          const angle = (particle.connectionIndex / 6) * Math.PI * 2;
+          const radius = 5; // Same as in createProjectsGrid
+          
+          const x = particle.position * Math.cos(angle) * radius;
+          const z = particle.position * Math.sin(angle) * radius;
+          const y = particle.position * 0.5 * Math.sin(angle);
+          
+          // Update particle position
+          positions[i * 3] = x;
+          positions[i * 3 + 1] = y;
+          positions[i * 3 + 2] = z;
+        }
+        
+        // Update the geometry
+        child.geometry.attributes.position.needsUpdate = true;
       }
     });
     
-    // Update camera position slightly
-    projectsCamera.position.x = Math.sin(time * 0.3) * 1;
+    // Camera animation
+    projectsCamera.position.x = Math.sin(time * 0.2) * 2;
+    projectsCamera.position.y = 3 + Math.sin(time * 0.3) * 1;
+    projectsCamera.position.z = 8 + Math.cos(time * 0.2) * 1;
     projectsCamera.lookAt(0, 0, 0);
     
     // Render scene

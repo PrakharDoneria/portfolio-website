@@ -164,15 +164,18 @@ async function loadProjects() {
       
       projectEl.innerHTML = `
         <div class="card-inner">
-          <div class="card-front" style="background-image: url('${project.image}')"></div>
+          <div class="card-front" style="background-image: url('${project.image}')">
+            <h3 class="project-title-overlay">${project.title}</h3>
+          </div>
           <div class="card-back glass-card">
             <div>
               <h3 class="project-title">${project.title}</h3>
               <p class="project-description">${project.description}</p>
               <div class="project-tech">
-                ${project.technologies.map(tech => `
+                ${project.technologies.slice(0, 5).map(tech => `
                   <span class="tech-tag">${tech}</span>
                 `).join('')}
+                ${project.technologies.length > 5 ? `<span class="tech-tag">+${project.technologies.length - 5} more</span>` : ''}
               </div>
             </div>
             <div class="project-links">
