@@ -1,349 +1,460 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="default">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-  <title>Prakhar Doneria | Developer & Entrepreneur</title>
-  
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Three.js for 3D animations -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/theme-switcher.css">
-</head>
-<body>
-  <!-- Custom Cursor -->
-  <div class="cursor-dot"></div>
-  <div class="cursor-outline"></div>
-  
-  <!-- Navbar -->
-  <nav id="navbar" class="glass-nav">
-    <div class="container">
-      <div class="logo">
-        <a href="#" class="gradient-text">Prakhar<span>Doneria</span></a>
-      </div>
-      <div class="nav-links">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#apis" class="nav-link">APIs</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </div>
-      <div class="mobile-menu-btn">
-        <i class="fas fa-bars"></i>
-      </div>
-    </div>
-  </nav>
-  
-  <!-- Mobile Menu -->
-  <div class="mobile-menu">
-    <div class="close-btn">
-      <i class="fas fa-times"></i>
-    </div>
-    <div class="mobile-links">
-      <a href="#home" class="mobile-link">Home</a>
-      <a href="#about" class="mobile-link">About</a>
-      <a href="#skills" class="mobile-link">Skills</a>
-      <a href="#projects" class="mobile-link">Projects</a>
-      <a href="#apis" class="mobile-link">APIs</a>
-      <a href="#contact" class="mobile-link">Contact</a>
-    </div>
-    <div class="mobile-social">
-      <a href="https://github.com/prakhardoneria" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://dev.to/prakhardoneria" target="_blank"><i class="fab fa-dev"></i></a>
-      <a href="https://www.linkedin.com/in/prakhardoneria-646090228" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://instagram.com/prakhardoneria" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://twitter.com/prakhardoneria" target="_blank"><i class="fab fa-twitter"></i></a>
-    </div>
-  </div>
-  
-  <!-- Hero Section -->
-  <section id="home" class="hero bg-animated">
-    <div id="particles-container"></div>
-    <div class="container">
-      <div class="hero-content">
-        <h1 class="animate-float">
-          <span class="gradient-text">Hi, I'm Prakhar Doneria</span>
-        </h1>
-        <div class="typing-container">
-          <h2 class="typing-text">Developer & Entrepreneur</h2>
-        </div>
-        <p class="hero-description animate-pulse-slow">
-          I create innovative applications, powerful APIs, and cutting-edge AI solutions.
-        </p>
-        <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="#contact" class="btn btn-outline">Contact Me</a>
-        </div>
-        <div class="hero-social">
-          <a href="https://github.com/prakhardoneria" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://dev.to/prakhardoneria" target="_blank"><i class="fab fa-dev"></i></a>
-          <a href="https://www.linkedin.com/in/prakhardoneria-646090228" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://instagram.com/prakhardoneria" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://twitter.com/prakhardoneria" target="_blank"><i class="fab fa-twitter"></i></a>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div id="threejs-container"></div>
-      </div>
-    </div>
-    <div class="scroll-indicator">
-      <a href="#about">
-        <div class="mouse">
-          <div class="wheel"></div>
-        </div>
-        <div class="arrow">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </a>
-    </div>
-  </section>
-  
-  <!-- About Section -->
-  <section id="about" class="about">
-    <div class="container">
-      <div class="section-header">
-        <h2><span class="gradient-text">About Me</span></h2>
-        <div class="section-line"></div>
-      </div>
-      <div class="about-content">
-        <div class="about-image animate-float">
-          <div class="image-container glass-card">
-            <img src="assets/images/profile.svg" alt="Prakhar Doneria">
-          </div>
-        </div>
-        <div class="about-text">
-          <h3>Founder of ProTecGames | Full Stack Developer | Core Team @ GDG On-Campus IEC | Jr. Cyber Security Expert | Pianist</h3>
-          <p>
-            Currently pursuing a Bachelor of Technology in Computer Software Engineering at IEC College of Engineering and Technology, 
-            I've taken the helm as Core Team Lead at GDG IEC and founded ProTecGames during my school time, a thriving Android app 
-            developmental company with a substantial user base. 
-          </p>
-          <p>
-            Leveraging my competencies in team management and cross-functional leadership, I drive both technological innovation 
-            and community engagement. The journey from a solo entrepreneur to leading a successful business has honed my skills 
-            in team building and strategic management.
-          </p>
-          <p>
-            Our team at ProTecGames, through dedication and collaborative effort, has created a platform that resonates with 
-            lakhs of users monthly. Embodying the spirit of Sadbhavna, I am committed to fostering an environment of non-violence, 
-            truth, and perseverance, reflecting these values in our company culture and products.
-          </p>
-          <div class="about-info">
-            <div class="info-item">
-              <span class="info-title"><i class="fas fa-code"></i> Top Skills</span>
-              <span class="info-value">FastAPI, JavaScript, Flutter</span>
-            </div>
-            <div class="info-item">
-              <span class="info-title"><i class="fas fa-project-diagram"></i> Experience</span>
-              <span class="info-value">ProTecGames Founder</span>
-            </div>
-            <div class="info-item">
-              <span class="info-title"><i class="fas fa-graduation-cap"></i> Education</span>
-              <span class="info-value">B.Tech, Computer Science (2024-2028)</span>
-            </div>
-            <div class="info-item">
-              <span class="info-title"><i class="fas fa-map-marker-alt"></i> Location</span>
-              <span class="info-value">Etawah, Uttar Pradesh, India</span>
-            </div>
-          </div>
-          <div class="about-cta">
-            <a href="#contact" class="btn btn-primary">Get In Touch</a>
-            <a href="#" class="btn btn-outline">Download CV</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Skills Section -->
-  <section id="skills" class="skills" style="position: relative; overflow: hidden;">
-    <div class="container">
-      <div class="section-header">
-        <h2><span class="gradient-text">My Skills</span></h2>
-        <div class="section-line"></div>
-      </div>
-      <div class="skills-content" id="skills-container">
-        <!-- Skills will be loaded from skills.json -->
-      </div>
-    </div>
-  </section>
-  
-  <!-- Projects Section -->
-  <section id="projects" class="projects" style="position: relative; overflow: hidden;">
-    <div class="container">
-      <div class="section-header">
-        <h2><span class="gradient-text">My Projects</span></h2>
-        <div class="section-line"></div>
-      </div>
-      <div class="projects-content" id="projects-container">
-        <!-- Projects will be loaded from projects.json -->
-      </div>
-    </div>
-  </section>
-  
-  <!-- API Showcase Section -->
-  <section id="apis" class="apis" style="position: relative; overflow: hidden;">
-    <div class="container">
-      <div class="section-header">
-        <h2><span class="gradient-text">My APIs</span></h2>
-        <div class="section-line"></div>
-      </div>
-      <div class="api-intro">
-        <p>
-          Explore my collection of powerful APIs available on various platforms. These APIs provide solutions 
-          for a wide range of applications, from natural language processing to data visualization and integration.
-        </p>
-      </div>
-      <div class="api-platforms" id="api-platforms-container">
-        <!-- API platforms will be loaded from apis.json -->
-      </div>
-    </div>
-  </section>
-  
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <div class="section-header">
-        <h2><span class="gradient-text">Get In Touch</span></h2>
-        <div class="section-line"></div>
-      </div>
-      <div class="contact-content">
-        <div class="contact-info">
-          <h3>Contact Information</h3>
-          <p>
-            Feel free to reach out to me for collaboration, projects, or just to say hello! 
-            I'm always open to discussing new ideas and opportunities.
-          </p>
-          <div class="info-item">
-            <i class="fas fa-envelope"></i>
-            <div>
-              <h4>Email</h4>
-              <p><a href="mailto:protecgamesofficial@gmail.com">protecgamesofficial@gmail.com</a></p>
-            </div>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-globe"></i>
-            <div>
-              <h4>Personal Website</h4>
-              <p><a href="https://prakhardoneriaindia.web.app" target="_blank">prakhardoneriaindia.web.app</a></p>
-            </div>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <div>
-              <h4>Location</h4>
-              <p>Etawah, Uttar Pradesh, India</p>
-            </div>
-          </div>
-          <div class="contact-social">
-            <h4>Social Profiles</h4>
-            <div class="social-icons">
-              <a href="https://github.com/prakhardoneria" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="https://dev.to/prakhardoneria" target="_blank"><i class="fab fa-dev"></i></a>
-              <a href="https://www.linkedin.com/in/prakhardoneria-646090228" target="_blank"><i class="fab fa-linkedin"></i></a>
-              <a href="https://instagram.com/prakhardoneria" target="_blank"><i class="fab fa-instagram"></i></a>
-              <a href="https://twitter.com/prakhardoneria" target="_blank"><i class="fab fa-twitter"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="contact-form glass-card">
-          <h3>Send Me a Message</h3>
-          <form id="contact-form">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-logo">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <title>Prakhar Doneria | Developer & Entrepreneur</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Three.js for 3D animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/theme-switcher.css" />
+  </head>
+  <body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="glass-nav">
+      <div class="container">
+        <div class="logo">
           <a href="#" class="gradient-text">Prakhar<span>Doneria</span></a>
         </div>
-        <div class="footer-nav">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#apis">APIs</a>
-          <a href="#contact">Contact</a>
+        <div class="nav-links">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#apis" class="nav-link">APIs</a>
+          <a href="#contact" class="nav-link">Contact</a>
         </div>
-        <div class="footer-social">
-          <a href="https://github.com/prakhardoneria" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://dev.to/prakhardoneria" target="_blank"><i class="fab fa-dev"></i></a>
-          <a href="https://www.linkedin.com/in/prakhardoneria-646090228" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://instagram.com/prakhardoneria" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://twitter.com/prakhardoneria" target="_blank"><i class="fab fa-twitter"></i></a>
+        <div class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Prakhar Doneria. All rights reserved.</p>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="close-btn">
+        <i class="fas fa-times"></i>
+      </div>
+      <div class="mobile-links">
+        <a href="#home" class="mobile-link">Home</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#apis" class="mobile-link">APIs</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+      </div>
+      <div class="mobile-social">
+        <a href="https://github.com/prakhardoneria" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="https://dev.to/prakhardoneria" target="_blank"
+          ><i class="fab fa-dev"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/prakhardoneria-646090228"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://instagram.com/prakhardoneria" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://twitter.com/prakhardoneria" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
       </div>
     </div>
-  </footer>
-  
-  <!-- Custom JS -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/particles.js"></script>
-  <script src="assets/js/three-animation.js"></script>
-  <script src="assets/js/section-animations.js"></script>
-  <script src="assets/js/theme-switcher.js"></script>
-  
-  <!-- Theme-specific visual elements (initially hidden) -->
-  <div class="neon-grid" aria-hidden="true"></div>
-  <div class="retro-scanlines" aria-hidden="true"></div>
-  <div class="light-rays" aria-hidden="true"></div>
-  <div class="matrix-rain" aria-hidden="true"></div>
-  
-  <!-- Theme helpers for keyboard controls -->
-  <div class="konami-indicator">
-    <i class="fas fa-gamepad"></i>
-    <span>Try: </span>
-    <div class="key-sequence">
-      <span class="key">↑</span><span class="key">↑</span><span class="key">↓</span><span class="key">↓</span><span class="key">←</span><span class="key">→</span><span class="key">←</span><span class="key">→</span><span class="key">B</span><span class="key">A</span>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero bg-animated">
+      <div id="particles-container"></div>
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="animate-float">
+            <span class="gradient-text">Hi, I'm Prakhar Doneria</span>
+          </h1>
+          <div class="typing-container">
+            <h2 class="typing-text">Developer & Entrepreneur</h2>
+          </div>
+          <p class="hero-description animate-pulse-slow">
+            I create innovative applications, powerful APIs, and cutting-edge AI
+            solutions.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+          </div>
+          <div class="hero-social">
+            <a href="https://github.com/prakhardoneria" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://dev.to/prakhardoneria" target="_blank"
+              ><i class="fab fa-dev"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/prakhardoneria-646090228"
+              target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="https://instagram.com/prakhardoneria" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://twitter.com/prakhardoneria" target="_blank"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div id="threejs-container"></div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <a href="#about">
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+          <div class="arrow">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-header">
+          <h2><span class="gradient-text">About Me</span></h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="about-content">
+          <div class="about-image animate-float">
+            <div class="image-container glass-card">
+              <img src="assets/images/profile.svg" alt="Prakhar Doneria" />
+            </div>
+          </div>
+          <div class="about-text">
+            <h3>
+              Founder of ProTecGames | Full Stack Developer | Core Team @ GDG
+              On-Campus IEC | Jr. Cyber Security Expert | Pianist
+            </h3>
+            <p>
+              Currently pursuing a Bachelor of Technology in Computer Software
+              Engineering at IEC College of Engineering and Technology, I've
+              taken the helm as Core Team Lead at GDG IEC and founded
+              ProTecGames during my school time, a thriving Android app
+              developmental company with a substantial user base.
+            </p>
+            <p>
+              Leveraging my competencies in team management and cross-functional
+              leadership, I drive both technological innovation and community
+              engagement. The journey from a solo entrepreneur to leading a
+              successful business has honed my skills in team building and
+              strategic management.
+            </p>
+            <p>
+              Our team at ProTecGames, through dedication and collaborative
+              effort, has created a platform that resonates with lakhs of users
+              monthly. Embodying the spirit of Sadbhavna, I am committed to
+              fostering an environment of non-violence, truth, and perseverance,
+              reflecting these values in our company culture and products.
+            </p>
+            <div class="about-info">
+              <div class="info-item">
+                <span class="info-title"
+                  ><i class="fas fa-code"></i> Top Skills</span
+                >
+                <span class="info-value">FastAPI, JavaScript, Flutter</span>
+              </div>
+              <div class="info-item">
+                <span class="info-title"
+                  ><i class="fas fa-project-diagram"></i> Experience</span
+                >
+                <span class="info-value">ProTecGames Founder</span>
+              </div>
+              <div class="info-item">
+                <span class="info-title"
+                  ><i class="fas fa-graduation-cap"></i> Education</span
+                >
+                <span class="info-value"
+                  >B.Tech, Computer Science (2024-2028)</span
+                >
+              </div>
+              <div class="info-item">
+                <span class="info-title"
+                  ><i class="fas fa-map-marker-alt"></i> Location</span
+                >
+                <span class="info-value">Etawah, Uttar Pradesh, India</span>
+              </div>
+            </div>
+            <div class="about-cta">
+              <a href="#contact" class="btn btn-primary">Get In Touch</a>
+              <a href="#" class="btn btn-outline">Download CV</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section
+      id="skills"
+      class="skills"
+      style="position: relative; overflow: hidden"
+    >
+      <div class="container">
+        <div class="section-header">
+          <h2><span class="gradient-text">My Skills</span></h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="skills-content" id="skills-container">
+          <!-- Skills will be loaded from skills.json -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section
+      id="projects"
+      class="projects"
+      style="position: relative; overflow: hidden"
+    >
+      <div class="container">
+        <div class="section-header">
+          <h2><span class="gradient-text">My Projects</span></h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="projects-content" id="projects-container">
+          <!-- Projects will be loaded from projects.json -->
+        </div>
+      </div>
+    </section>
+
+    <!-- API Showcase Section -->
+    <section
+      id="apis"
+      class="apis"
+      style="position: relative; overflow: hidden"
+    >
+      <div class="container">
+        <div class="section-header">
+          <h2><span class="gradient-text">My APIs</span></h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="api-intro">
+          <p>
+            Explore my collection of powerful APIs available on various
+            platforms. These APIs provide solutions for a wide range of
+            applications, from natural language processing to data visualization
+            and integration.
+          </p>
+        </div>
+        <div class="api-platforms" id="api-platforms-container">
+          <!-- API platforms will be loaded from apis.json -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2><span class="gradient-text">Get In Touch</span></h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p>
+              Feel free to reach out to me for collaboration, projects, or just
+              to say hello! I'm always open to discussing new ideas and
+              opportunities.
+            </p>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <p>
+                  <a href="mailto:prakhardoneria3@gmail.com"
+                    >prakhardoneria3@gmail.com</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-globe"></i>
+              <div>
+                <h4>Personal Website</h4>
+                <p>
+                  <a href="https://prakhardoneriaindia.web.app" target="_blank"
+                    >prakhardoneriaindia.web.app</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Location</h4>
+                <p>Etawah, Uttar Pradesh, India</p>
+              </div>
+            </div>
+            <div class="contact-social">
+              <h4>Social Profiles</h4>
+              <div class="social-icons">
+                <a href="https://github.com/prakhardoneria" target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a href="https://dev.to/prakhardoneria" target="_blank"
+                  ><i class="fab fa-dev"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/prakhardoneria-646090228"
+                  target="_blank"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+                <a href="https://instagram.com/prakhardoneria" target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="https://twitter.com/prakhardoneria" target="_blank"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form glass-card">
+            <h3>Send Me a Message</h3>
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-logo">
+            <a href="#" class="gradient-text">Prakhar<span>Doneria</span></a>
+          </div>
+          <div class="footer-nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#apis">APIs</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="footer-social">
+            <a href="https://github.com/prakhardoneria" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://dev.to/prakhardoneria" target="_blank"
+              ><i class="fab fa-dev"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/prakhardoneria-646090228"
+              target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="https://instagram.com/prakhardoneria" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://twitter.com/prakhardoneria" target="_blank"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Prakhar Doneria. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/particles.js"></script>
+    <script src="assets/js/three-animation.js"></script>
+    <script src="assets/js/section-animations.js"></script>
+    <script src="assets/js/theme-switcher.js"></script>
+
+    <!-- Theme-specific visual elements (initially hidden) -->
+    <div class="neon-grid" aria-hidden="true"></div>
+    <div class="retro-scanlines" aria-hidden="true"></div>
+    <div class="light-rays" aria-hidden="true"></div>
+    <div class="matrix-rain" aria-hidden="true"></div>
+
+    <!-- Theme helpers for keyboard controls -->
+    <div class="konami-indicator">
+      <i class="fas fa-gamepad"></i>
+      <span>Try: </span>
+      <div class="key-sequence">
+        <span class="key">↑</span><span class="key">↑</span
+        ><span class="key">↓</span><span class="key">↓</span
+        ><span class="key">←</span><span class="key">→</span
+        ><span class="key">←</span><span class="key">→</span
+        ><span class="key">B</span><span class="key">A</span>
+      </div>
     </div>
-  </div>
-  
-  <div class="hotkey-indicator">
-    <i class="fas fa-keyboard"></i>
-    <span>Theme Hotkeys: </span>
-    <span class="key">c-o-s</span>
-    <span class="key">n-e-o</span>
-    <span class="key">h-a-x</span>
-    <span class="key">l-i-t</span>
-    <span class="key">r-e-t</span>
-  </div>
-</body>
+
+    <div class="hotkey-indicator">
+      <i class="fas fa-keyboard"></i>
+      <span>Theme Hotkeys: </span>
+      <span class="key">c-o-s</span>
+      <span class="key">n-e-o</span>
+      <span class="key">h-a-x</span>
+      <span class="key">l-i-t</span>
+      <span class="key">r-e-t</span>
+    </div>
+  </body>
 </html>
