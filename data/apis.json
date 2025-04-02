@@ -4,54 +4,54 @@
     "description": "APIs published on RapidAPI, the world's largest API marketplace.",
     "apis": [
       {
-        "title": "Stock Market Data API",
-        "description": "Real-time and historical stock market data with comprehensive analysis tools.",
-        "tags": ["Finance", "Stocks", "Real-time"],
+        "title": "Image Explainer API",
+        "description": "RESTful API coded in Node.js using Gemini Vision Pro to analyze and explain image content with detailed descriptions.",
+        "tags": ["AI", "Computer Vision", "Node.js"],
         "borderColor": "#00d8ff"
       },
       {
-        "title": "E-Commerce Market Trends",
-        "description": "Analyze e-commerce market trends, consumer behavior, and product popularity.",
-        "tags": ["E-Commerce", "Analytics", "Trends"],
+        "title": "VRINDA AI API",
+        "description": "Integration API for VRINDA AI, an NLM trained by senior cybersecurity expert Navneet Singh. Used for creating an Android app version of the AI.",
+        "tags": ["AI", "NLP", "Flutter"],
         "borderColor": "#00d8ff"
       },
       {
-        "title": "Natural Language Processing",
-        "description": "Advanced NLP tools for sentiment analysis, entity extraction, and text classification.",
-        "tags": ["AI", "NLP", "Machine Learning"],
+        "title": "Git Manager for GitHub",
+        "description": "API for reading, writing, and appending repository content and Gists, or searching GitHub repositories efficiently.",
+        "tags": ["Python", "Flask", "GitHub"],
         "borderColor": "#00d8ff"
       }
     ],
     "actionText": "Explore on RapidAPI",
-    "actionLink": "https://rapidapi.com/",
+    "actionLink": "https://rapidapi.com/yashdoneria/api/image-explainer/",
     "actionColor": "#00d8ff",
     "logo": "fa-bolt"
   },
   {
-    "platform": "Apyflux",
-    "description": "APIs published on Apyflux, a growing platform for innovative API solutions.",
+    "platform": "Custom API Solutions",
+    "description": "Specialized APIs built for custom applications and integration needs.",
     "apis": [
       {
-        "title": "Social Media Analytics",
-        "description": "Comprehensive analytics for social media engagement, reach, and audience demographics.",
-        "tags": ["Social Media", "Analytics", "Marketing"],
+        "title": "SunoSynth Music Generation",
+        "description": "Backend API for AI music generation with custom lyrics creation capabilities, used in both web and mobile applications.",
+        "tags": ["Node.js", "Python", "AI", "Music"],
         "borderColor": "#bd00ff"
       },
       {
-        "title": "Crypto Market Data",
-        "description": "Real-time cryptocurrency market data, price predictions, and trend analysis.",
-        "tags": ["Crypto", "Finance", "Blockchain"],
+        "title": "HTML Editor PRO API",
+        "description": "API for real-time code collaboration, project sharing, and AI code generation features integrated into the HTML Editor PRO application.",
+        "tags": ["Node.js", "Firebase", "MongoDB"],
         "borderColor": "#bd00ff"
       },
       {
-        "title": "Image Recognition API",
-        "description": "Advanced computer vision for object detection, face recognition, and image classification.",
-        "tags": ["AI", "Computer Vision", "Recognition"],
+        "title": "DevBytes News API",
+        "description": "News summarization API that condenses tech articles into 60-word summaries for quick consumption by developers and tech professionals.",
+        "tags": ["Google Gemini", "Python", "FastAPI"],
         "borderColor": "#bd00ff"
       }
     ],
-    "actionText": "Discover on Apyflux",
-    "actionLink": "https://apyflux.com/",
+    "actionText": "Request API Integration",
+    "actionLink": "https://github.com/prakhardoneria",
     "actionColor": "#bd00ff",
     "logo": "fa-code"
   }

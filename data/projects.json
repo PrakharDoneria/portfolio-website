@@ -1,49 +1,49 @@
 [
   {
-    "title": "AI-Powered Financial Analysis",
-    "description": "Developed a machine learning platform that analyzes financial data to predict market trends with 92% accuracy. Used Python, TensorFlow, and React for the user interface.",
+    "title": "DevBytes",
+    "description": "AI-based 60-word news summarizer app made for people in tech, by people in tech. An innovative idea for GDG Solutions Challenge 2025 in association with GDG on Campus IEC.",
     "image": "assets/images/project-finance.svg",
-    "technologies": ["Python", "TensorFlow", "Flask", "React"],
+    "technologies": ["Google Gemini", "Python", "FastAPI", "Flutter", "HTML", "CSS", "JavaScript"],
     "demoLink": "https://github.com/prakhardoneria",
     "githubLink": "https://github.com/prakhardoneria"
   },
   {
-    "title": "Blockchain Integration Platform",
-    "description": "Created a secure platform that enables businesses to integrate blockchain technologies into their existing infrastructure. Built with Solidity, Node.js, and React.",
+    "title": "TrackTik",
+    "description": "A location-based alarm app that wakes you up 30 minutes before reaching your destination. Developed in collaboration with ProTecGames, this app helps travelers never miss their stops.",
     "image": "assets/images/project-blockchain.svg",
-    "technologies": ["Solidity", "Node.js", "React", "Web3.js", "MongoDB"],
+    "technologies": ["Flutter", "Android Development", "Android Studio"],
     "demoLink": "https://github.com/prakhardoneria",
     "githubLink": "https://github.com/prakhardoneria"
   },
   {
-    "title": "E-Commerce Platform",
-    "description": "Designed and implemented a modern e-commerce platform with real-time inventory management, secure payment processing, and personalized user experiences.",
+    "title": "SunoSynth - AI Music Maker",
+    "description": "AI music maker available for both Android (Flutter) and Web (NextJS) with backends in Python and Node.js. Features include AI music generation, AI lyrics writing, cross-platform account access, and custom instructions.",
     "image": "assets/images/project-ecommerce.svg",
-    "technologies": ["Node.js", "React", "MongoDB", "Redis", "Stripe API"],
+    "technologies": ["Flutter", "Dart", "Node.js", "MongoDB", "Next.js", "Firebase", "Google Gemini"],
     "demoLink": "https://github.com/prakhardoneria",
     "githubLink": "https://github.com/prakhardoneria"
   },
   {
-    "title": "Healthcare Data Platform",
-    "description": "Built a HIPAA-compliant platform for healthcare providers to securely share and analyze patient data across institutions. Used Python, Django, and React.",
+    "title": "VerboVisions: Text to Image",
+    "description": "Android app that lets users create images using AI. This application transforms text descriptions into visual art through advanced machine learning algorithms.",
     "image": "assets/images/project-healthcare.svg",
-    "technologies": ["Python", "Django", "React", "PostgreSQL"],
-    "demoLink": "https://github.com/prakhardoneria",
+    "technologies": ["Java", "Node.js", "MongoDB", "CockroachDB", "MySQL"],
+    "demoLink": "https://play.google.com/store/apps/details?id=com.verbovisions",
     "githubLink": "https://github.com/prakhardoneria"
   },
   {
-    "title": "Neural Art Generator",
-    "description": "Created an AI-powered art generation tool that uses neural style transfer to create unique artwork. Users can upload a content image and a style image to produce stunning artistic results.",
+    "title": "HTML Editor PRO",
+    "description": "Professional HTML editor with real-time collaboration, website hosting, syntax highlighting, and AI code generation. Features include project sharing, code prediction, and multiple themes.",
     "image": "assets/images/project-finance.svg",
-    "technologies": ["Python", "TensorFlow", "Flask", "JavaScript", "Canvas API"],
-    "demoLink": "https://github.com/prakhardoneria",
+    "technologies": ["Java", "Node.js", "Python", "MongoDB", "MySQL", "CockroachDB", "Firebase"],
+    "demoLink": "https://play.google.com/store/apps/details?id=com.htmleditorpro",
     "githubLink": "https://github.com/prakhardoneria"
   },
   {
-    "title": "Smart Home Automation",
-    "description": "Developed a comprehensive smart home system that integrates various IoT devices under a single, easy-to-use interface. Features include voice control, scheduling, and energy usage monitoring.",
+    "title": "PizzaVerse - Restaurant App",
+    "description": "Full-stack restaurant app with features like ordering pizza, adding new pizza types, managing categories, and modern UI with sorting functionality. Built for IEC College of Engineering and Technology.",
     "image": "assets/images/project-blockchain.svg",
-    "technologies": ["JavaScript", "Node.js", "React", "MQTT", "IoT Protocols"],
+    "technologies": ["HTML5", "CSS", "JavaScript", "Next.js", "MongoDB", "FastAPI", "Python"],
     "demoLink": "https://github.com/prakhardoneria",
     "githubLink": "https://github.com/prakhardoneria"
   }

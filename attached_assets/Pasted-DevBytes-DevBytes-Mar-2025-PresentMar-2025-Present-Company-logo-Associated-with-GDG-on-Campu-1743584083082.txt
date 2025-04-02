@@ -1,0 +1,188 @@
+DevBytes
+DevBytes
+Mar 2025 - PresentMar 2025 - Present
+Company logo
+Associated with GDG on Campus IEC
+Associated with GDG on Campus IEC
+An AI based 60 words news summariser app made for people in tech, by people in tech.
+
+An innovative idea for GDG Solutions Challenge 2025
+An AI based 60 words news summariser app made for people in tech, by people in tech. An innovative idea for GDG Solutions Challenge 2025
+Skills: Google Gemini · Python (Programming Language) · FastAPI · Flutter · HTML · HTML5 · Cascading Style Sheets (CSS) · JavaScript · Android Studio · Android Development
+Skills: Google Gemini · Python (Programming Language) · FastAPI · Flutter · HTML · HTML5 · Cascading Style Sheets (CSS) · JavaScript · Android Studio · Android Development
+
+Splash ScreenSplash Screen
+
+Sample Page showing newsSample Page showing news
+Other contributorsOther contributors
+
+
+TrackTik
+TrackTik
+Mar 2025 - PresentMar 2025 - Present
+Company logo
+Associated with ProTecGames
+Associated with ProTecGames
+A location based alarm that wakes you up 30 minutes before reaching your destination.
+A location based alarm that wakes you up 30 minutes before reaching your destination.
+Skills: Flutter · Android Development · Android Studio
+Skills: Flutter · Android Development · Android Studio
+
+alert notificationalert notification
+
+mark destinationmark destination
+
+home showing maphome showing map
+Show all 4 media
+VRINDA AI
+VRINDA AI
+Mar 2025 - PresentMar 2025 - Present
+Associated with IEC College of Engineering and Technology
+Associated with IEC College of Engineering and Technology
+VRINDA AI is an NLM trained and made by Navneet Singh, a senior cyber security expert and ai engineer.
+
+I contributed to the project by making a simple Android app version of the ai using their API.
+VRINDA AI is an NLM trained and made by Navneet Singh, a senior cyber security expert and ai engineer. I contributed to the project by making a simple Android app version of the ai using their API.
+Skills: Flutter · Dart
+Skills: Flutter · Dart
+
+Sample ChatSample Chat
+
+CreditsCredits
+
+Home PageHome Page
+Other contributorsOther contributors
+
+SunoSynth - AI Music Maker
+SunoSynth - AI Music Maker
+Feb 2025 - PresentFeb 2025 - Present
+Company logo
+Associated with ProTecGames
+Associated with ProTecGames
+SunoSynth is an AI music maker available for both Android (Flutter) and Web (NextJS) with backends made of Python and NODE JS with firebase based authentication and MongoDB as database.
+
+Make your dream music with our app with credit system!
+
+10 Credits for Music Generation
+5 Credits for Ai Lyrics 
+2 for saving in local storage
+
+
+Features:
+- Make Music with Ai
+- Get Ai write lyrics for you if you want
+- A single account can be accessed on android and web app both
+- Custom instructions
+- Support all languages songs
+- Open Source (web version)
+SunoSynth is an AI music maker available for both Android (Flutter) and Web (NextJS) with backends made of Python and NODE JS with firebase based authentication and MongoDB as database. Make your dream music with our app with credit system! 10 Credits for Music Generation 5 Credits for Ai Lyrics 2 for saving in local storage Features: - Make Music with Ai - Get Ai write lyrics for you if you want - A single account can be accessed on android and web app both - Custom instructions - Support all languages songs - Open Source (web version)
+Skills: Flutter · Dart · Node.js · MongoDB · Next.js · Firebase · Google Gemini · Android Development · Android Studio
+Skills: Flutter · Dart · Node.js · MongoDB · Next.js · Firebase · Google Gemini · Android Development · Android Studio
+
+Splash ScreenSplash Screen
+
+Dashboard Ui (Android App)Dashboard Ui (Android App)
+
+Usage example (android app)Usage example (android app)
+Show all 7 media
+VerboVisions: Free Text to Image
+VerboVisions: Free Text to Image
+Jul 2024 - PresentJul 2024 - Present
+Company logo
+Associated with ProTecGames
+Associated with ProTecGames
+Android app that lets you make images using Ai
+Android app that lets you make images using Ai
+Skills: Java · Node.js · MongoDB · CockroachDB · MySQL
+Skills: Java · Node.js · MongoDB · CockroachDB · MySQL
+
+VerboVisions - Text to Image - Apps on Google PlayVerboVisions - Text to Image - Apps on Google Play
+HTML Editor PRO
+HTML Editor PRO
+Jun 2022 - PresentJun 2022 - Present
+Company logo
+Associated with ProTecGames
+Associated with ProTecGames
+Show project
+Online collaboration for real-time coding with others
+• Website and project hosting directly from the app
+• Easy project share/upload and download functionality
+• Syntax highlighting for enhanced code readability
+• Code preservation to ensure progress is always saved
+• User-friendly interface for effortless navigation
+• Lightweight and ad-free environment for distraction-free coding
+• Three visually appealing themes: light, dark, and gradient
+• Ai code writer with Open AI API
+• Code Prediction
+Online collaboration for real-time coding with others • Website and project hosting directly from the app • Easy project share/upload and download functionality • Syntax highlighting for enhanced code readability • Code preservation to ensure progress is always saved • User-friendly interface for effortless navigation • Lightweight and ad-free environment for distraction-free coding • Three visually appealing themes: light, dark, and gradient • Ai code writer with Open AI API • Code Prediction
+Skills: Java · Node.js · Python (Programming Language) · MongoDB · MySQL · CockroachDB · Firebase
+Skills: Java · Node.js · Python (Programming Language) · MongoDB · MySQL · CockroachDB · Firebase
+
+HTML Editor PRO - with Ai - Apps on Google PlayHTML Editor PRO - with Ai - Apps on Google Play
+Full Stack - Restaurant App
+Full Stack - Restaurant App
+Mar 2025 - Mar 2025Mar 2025 - Mar 2025
+Associated with IEC College of Engineering and Technology
+Associated with IEC College of Engineering and Technology
+Full-Stack Restaurant app with features like; Order Pizza, Add New Pizza, Add New Category, Modern Ui, Sort Pizzas
+Full-Stack Restaurant app with features like; Order Pizza, Add New Pizza, Add New Category, Modern Ui, Sort Pizzas
+Skills: HTML5 · Cascading Style Sheets (CSS) · JavaScript · Next.js · MongoDB · FastAPI · Python (Programming Language)
+Skills: HTML5 · Cascading Style Sheets (CSS) · JavaScript · Next.js · MongoDB · FastAPI · Python (Programming Language)
+PizzaVerse - Craft Your Perfect SlicePizzaVerse - Craft Your Perfect Slice
+
+Main PageMain Page
+
+CartCart
+Show all 7 media
+ClulesVibe
+ClulesVibe
+May 2024 - Jun 2024May 2024 - Jun 2024
+Company logo
+Associated with ProTecGames
+Associated with ProTecGames
+Skills: Node.js · Android Development · Email Marketing · Databases · Firebase · Flask · Full-Stack Development · Java · Marketing · MySQL · Python (Programming Language) · SQL · Web Development · MongoDB · Express.js
+Skills: Node.js · Android Development · Email Marketing · Databases · Firebase · Flask · Full-Stack Development · Java · Marketing · MySQL · Python (Programming Language) · SQL · Web Development · MongoDB · Express.js
+
+Explore PlaylistExplore Playlist
+
+Explore ArtistExplore Artist
+
+History PageHistory Page
+Show all 6 media
+Other contributorsOther contributors
+
+Antara
+Antara
+Feb 2024 - Mar 2024Feb 2024 - Mar 2024
+Music Player made using YouTube Music API
+Music Player made using YouTube Music API
+Skills: Full-Stack Development · Search Engine Optimization (SEO) · Node.js · Cascading Style Sheets (CSS) · Web Design · HTML5 · Web Development
+Skills: Full-Stack Development · Search Engine Optimization (SEO) · Node.js · Cascading Style Sheets (CSS) · Web Design · HTML5 · Web Development
+
+Sync LyricsSync Lyrics
+
+Search MusicSearch Music
+
+Player PagePlayer Page
+Show all 4 media
+Other contributorsOther contributors
+
+Git Manager for Github
+Git Manager for Github
+Mar 2024 - Mar 2024Mar 2024 - Mar 2024
+Read/Write/Append Repository and Gist or search GitHub
+Read/Write/Append Repository and Gist or search GitHub
+Skills: Python (Programming Language) · Flask
+Skills: Python (Programming Language) · Flask
+Image Explainer
+Image Explainer
+Mar 2024 - Mar 2024Mar 2024 - Mar 2024
+Company logo
+Associated with ProTecGames
+Associated with ProTecGames
+RESTful API coded in Node JS using Gemini Vision Pro
+
+Have a look yourself
+https://rapidapi.com/yashdoneria/api/image-explainer/
+RESTful API coded in Node JS using Gemini Vision Pro Have a look yourself https://rapidapi.com/yashdoneria/api/image-explainer/
+Skills: Node.js
