@@ -229,6 +229,31 @@
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
+/* Ensure text is readable in all themes */
+[data-theme]:not([data-theme="default"]) .project-card-back {
+  color: var(--text-color);
+}
+
+[data-theme]:not([data-theme="default"]) .api-card h4,
+[data-theme]:not([data-theme="default"]) .api-card p,
+[data-theme]:not([data-theme="default"]) .skill-info span,
+[data-theme]:not([data-theme="default"]) .skill-header h3,
+[data-theme]:not([data-theme="default"]) .project-description,
+[data-theme]:not([data-theme="default"]) .project-card-back h3 {
+  color: var(--text-color);
+}
+
+[data-theme]:not([data-theme="default"]) .tech-tag,
+[data-theme]:not([data-theme="default"]) .api-tag {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--text-color);
+}
+
+[data-theme="light"] .tech-tag,
+[data-theme="light"] .api-tag {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 [data-theme]:not([data-theme="default"]) .btn-primary {
   background: var(--primary-color);
   border-color: var(--primary-color);
