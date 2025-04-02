@@ -230,8 +230,11 @@
 }
 
 /* Ensure text is readable in all themes */
-[data-theme]:not([data-theme="default"]) .project-card-back {
-  color: var(--text-color);
+[data-theme]:not([data-theme="default"]) .project-card-back,
+[data-theme]:not([data-theme="default"]) .project-card-back p,
+[data-theme]:not([data-theme="default"]) .project-card-front,
+[data-theme]:not([data-theme="default"]) .project-card-front p {
+  color: var(--text-color) !important;
 }
 
 [data-theme]:not([data-theme="default"]) .api-card h4,
@@ -239,19 +242,73 @@
 [data-theme]:not([data-theme="default"]) .skill-info span,
 [data-theme]:not([data-theme="default"]) .skill-header h3,
 [data-theme]:not([data-theme="default"]) .project-description,
-[data-theme]:not([data-theme="default"]) .project-card-back h3 {
-  color: var(--text-color);
+[data-theme]:not([data-theme="default"]) .project-card-back h3,
+[data-theme]:not([data-theme="default"]) .project-title,
+[data-theme]:not([data-theme="default"]) .project-card-front h3 {
+  color: var(--text-color) !important;
+}
+
+/* Ensure all text elements are clearly visible */
+[data-theme="cosmic"] .project-card p,
+[data-theme="cosmic"] .api-card p,
+[data-theme="neon"] .project-card p,
+[data-theme="neon"] .api-card p,
+[data-theme="hacker"] .project-card p,
+[data-theme="hacker"] .api-card p,
+[data-theme="retro"] .project-card p,
+[data-theme="retro"] .api-card p {
+  color: var(--text-color) !important;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+/* Additional card styling for themes */
+[data-theme="cosmic"] .project-card-front,
+[data-theme="cosmic"] .project-card-back,
+[data-theme="cosmic"] .api-card,
+[data-theme="cosmic"] .skill-category {
+  background-color: rgba(12, 0, 50, 0.85) !important;
+  border: 1px solid rgba(157, 78, 221, 0.5) !important;
+  box-shadow: 0 0 15px rgba(157, 78, 221, 0.3) !important;
+}
+
+[data-theme="neon"] .project-card-front,
+[data-theme="neon"] .project-card-back,
+[data-theme="neon"] .api-card,
+[data-theme="neon"] .skill-category {
+  background-color: rgba(0, 0, 20, 0.85) !important;
+  border: 1px solid rgba(230, 0, 115, 0.5) !important;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.3) !important;
+}
+
+[data-theme="hacker"] .project-card-front,
+[data-theme="hacker"] .project-card-back,
+[data-theme="hacker"] .api-card,
+[data-theme="hacker"] .skill-category {
+  background-color: rgba(0, 10, 0, 0.85) !important;
+  border: 1px solid rgba(0, 255, 65, 0.5) !important;
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.2) !important;
+}
+
+[data-theme="retro"] .project-card-front,
+[data-theme="retro"] .project-card-back,
+[data-theme="retro"] .api-card,
+[data-theme="retro"] .skill-category {
+  background-color: rgba(48, 25, 52, 0.85) !important;
+  border: 1px solid rgba(241, 179, 110, 0.5) !important;
+  box-shadow: 0 0 15px rgba(241, 179, 110, 0.3) !important;
 }
 
 [data-theme]:not([data-theme="default"]) .tech-tag,
 [data-theme]:not([data-theme="default"]) .api-tag {
   background-color: rgba(255, 255, 255, 0.2);
-  color: var(--text-color);
+  color: var(--text-color) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 [data-theme="light"] .tech-tag,
 [data-theme="light"] .api-tag {
   background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 [data-theme]:not([data-theme="default"]) .btn-primary {
