@@ -158,8 +158,9 @@ async function loadProjects() {
       
       const projectEl = document.createElement('div');
       projectEl.classList.add('project-card');
+      
+      // Set initial styles and animation
       projectEl.style.animation = `fadeInUp 0.5s ease forwards ${delay}ms`;
-      projectEl.style.opacity = '0';
       
       projectEl.innerHTML = `
         <div class="card-inner">

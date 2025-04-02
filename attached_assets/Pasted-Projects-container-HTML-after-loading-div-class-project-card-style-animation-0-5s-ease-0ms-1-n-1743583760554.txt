@@ -1,0 +1,76 @@
+Projects container HTML after loading: <div class="project-card" style="animation: 0.5s ease 0ms 1 normal forwards running fadeInUp; opacity: 0;">
+        <div class="card-inner">
+          <div class="card-front" style="background-image: url('assets/images/project-finance.svg')"></div>
+          <div class="card-back glass-card">
+            <div>
+              <h3 class="project-title">AI-Powered Financial Analysis</h3>
+              <p class="project-description">Developed a machine learning platform that analyzes financial data to predict market trends with 92% accuracy. Used Python, TensorFlow, and React for the user interface.</p>
+              <div class="project-tech">
+                
+                  <span class="tech-tag">Python</span>
+                
+                  <span class="tech-tag">TensorFlow</span>
+                
+                  <span class="tech-tag">Flask</span>
+                
+                  <span class="tech-tag">React</span>
+                
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/prakhardoneria" target="_blank" class="btn btn-primary">Live Demo</a>
+              <a href="https://github.com/prakhardoneria" target="_blank" class="btn btn-outline">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div><div class="project-card" style="animation: 0.5s ease 200ms 1 normal forwards running fadeInUp; opacity: 0;">
+        <div class="card-inner">
+          <div class="card-front" style="background-image: url('assets/images/project-blockchain.svg')"></div>
+          <div class="card-back glass-card">
+            <div>
+              <h3 class="project-title">Blockchain Integration Platform</h3>
+              <p class="project-description">Created a secure platform that enables businesses to integrate blockchain technologies into their existing infrastructure. Built with Solidity, Node.js, and React.</p>
+              <div class="project-tech">
+                
+                  <span class="tech-tag">Solidity</span>
+                
+                  <span class="tech-tag">Node.js</span>
+                
+                  <span class="tech-tag">React</span>
+                
+                  <span class="tech-tag">Web3.js</span>
+                
+                  <span class="tech-tag">MongoDB</span>
+                
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/prakhardoneria" target="_blank" class="btn btn-primary">Live Demo</a>
+              <a href="https://github.com/prakhardoneria" target="_blank" class="btn btn-outline">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div><div class="project-card" style="animation: 0.5s ease 400ms 1 normal forwards running fadeInUp; opacity: 0;">
+        <div class="card-inner">
+          <div class="card-front" style="background-image: url('assets/images/project-ecommerce.svg')"></div>
+          <div class="card-back glass-card">
+            <div>
+              <h3 class="project-title">E-Commerce Platform</h3>
+              <p class="project-description">Designed and implemented a modern e-commerce platform with real-time inventory management, secure payment processing, and personalized user experiences.</p>
+              <div class="project-tech">
+                
+                  <span class="tech-tag">Node.js</span>
+                
+                  <span class="tech-tag">React</span>
+                
+                  <span class="tech-tag">MongoDB</span>
+                
+                  <span class="tech-tag">Redis</span>
+                
+                  <span class="tech-tag">Stripe API</span>
+                
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/prakhardoneria" target="_blank"…
+Number of projects: 6
