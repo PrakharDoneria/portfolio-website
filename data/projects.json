@@ -1,50 +1,50 @@
 [
   {
     "title": "DevBytes",
-    "description": "AI-based 60-word news summarizer app made for people in tech, by people in tech. An innovative idea for GDG Solutions Challenge 2025 in association with GDG on Campus IEC.",
-    "image": "assets/images/project-finance.svg",
-    "technologies": ["Google Gemini", "Python", "FastAPI", "Flutter", "HTML", "CSS", "JavaScript"],
-    "demoLink": "https://github.com/prakhardoneria",
-    "githubLink": "https://github.com/prakhardoneria"
+    "description": "A social platform for developers to share short-form programming tutorials, tips, and snippets. Features include code syntax highlighting, community voting, and personalized recommendations.",
+    "image": "assets/images/projects/devbytes.svg",
+    "technologies": ["React", "Node.js", "MongoDB", "WebSockets", "AWS"],
+    "demoLink": "https://devbytes.prakhardoneria.com",
+    "githubLink": "https://github.com/prakhardoneria/devbytes"
   },
   {
     "title": "TrackTik",
-    "description": "A location-based alarm app that wakes you up 30 minutes before reaching your destination. Developed in collaboration with ProTecGames, this app helps travelers never miss their stops.",
-    "image": "assets/images/project-blockchain.svg",
-    "technologies": ["Flutter", "Android Development", "Android Studio"],
-    "demoLink": "https://github.com/prakhardoneria",
-    "githubLink": "https://github.com/prakhardoneria"
+    "description": "A comprehensive task and project management application with time tracking, analytics, and team collaboration features. Includes Pomodoro timer, burndown charts, and integration with popular services.",
+    "image": "assets/images/projects/tracktik.svg",
+    "technologies": ["React", "Redux", "Express", "PostgreSQL", "Chart.js"],
+    "demoLink": "https://tracktik.prakhardoneria.com",
+    "githubLink": "https://github.com/prakhardoneria/tracktik"
   },
   {
-    "title": "SunoSynth - AI Music Maker",
-    "description": "AI music maker available for both Android (Flutter) and Web (NextJS) with backends in Python and Node.js. Features include AI music generation, AI lyrics writing, cross-platform account access, and custom instructions.",
-    "image": "assets/images/project-ecommerce.svg",
-    "technologies": ["Flutter", "Dart", "Node.js", "MongoDB", "Next.js", "Firebase", "Google Gemini"],
-    "demoLink": "https://github.com/prakhardoneria",
-    "githubLink": "https://github.com/prakhardoneria"
+    "title": "SunoSynth",
+    "description": "An AI-powered music composition tool that helps musicians generate melodies, chord progressions, and full arrangements based on text prompts. Features real-time collaboration and export to various formats.",
+    "image": "assets/images/projects/sunosynth.svg",
+    "technologies": ["Python", "TensorFlow", "React", "Web Audio API", "Flask"],
+    "demoLink": "https://sunosynth.prakhardoneria.com",
+    "githubLink": "https://github.com/prakhardoneria/sunosynth"
   },
   {
-    "title": "VerboVisions: Text to Image",
-    "description": "Android app that lets users create images using AI. This application transforms text descriptions into visual art through advanced machine learning algorithms.",
-    "image": "assets/images/project-healthcare.svg",
-    "technologies": ["Java", "Node.js", "MongoDB", "CockroachDB", "MySQL"],
-    "demoLink": "https://play.google.com/store/apps/details?id=com.verbovisions",
-    "githubLink": "https://github.com/prakhardoneria"
+    "title": "VerboVisions",
+    "description": "A tool that transforms text descriptions into visual art using AI. Allows users to generate, edit, and enhance images through natural language commands and sophisticated image processing algorithms.",
+    "image": "assets/images/projects/verbovisions.svg",
+    "technologies": ["Python", "PyTorch", "React", "FastAPI", "Docker"],
+    "demoLink": "https://verbovisions.prakhardoneria.com",
+    "githubLink": "https://github.com/prakhardoneria/verbovisions"
   },
   {
     "title": "HTML Editor PRO",
-    "description": "Professional HTML editor with real-time collaboration, website hosting, syntax highlighting, and AI code generation. Features include project sharing, code prediction, and multiple themes.",
-    "image": "assets/images/project-finance.svg",
-    "technologies": ["Java", "Node.js", "Python", "MongoDB", "MySQL", "CockroachDB", "Firebase"],
-    "demoLink": "https://play.google.com/store/apps/details?id=com.htmleditorpro",
-    "githubLink": "https://github.com/prakhardoneria"
+    "description": "A browser-based HTML, CSS, and JavaScript editor with real-time preview, syntax highlighting, and code optimization. Includes templates, component library, and responsive design tools.",
+    "image": "assets/images/projects/html-editor.svg",
+    "technologies": ["JavaScript", "CodeMirror", "LocalStorage API", "Service Workers"],
+    "demoLink": "https://html-editor.prakhardoneria.com",
+    "githubLink": "https://github.com/prakhardoneria/html-editor-pro"
   },
   {
-    "title": "PizzaVerse - Restaurant App",
-    "description": "Full-stack restaurant app with features like ordering pizza, adding new pizza types, managing categories, and modern UI with sorting functionality. Built for IEC College of Engineering and Technology.",
-    "image": "assets/images/project-blockchain.svg",
-    "technologies": ["HTML5", "CSS", "JavaScript", "Next.js", "MongoDB", "FastAPI", "Python"],
-    "demoLink": "https://github.com/prakhardoneria",
-    "githubLink": "https://github.com/prakhardoneria"
+    "title": "PizzaVerse",
+    "description": "An interactive mobile app for customizing and ordering pizza with 3D visualization. Features include AR view of your pizza, order tracking, and integration with popular delivery services.",
+    "image": "assets/images/projects/pizzaverse.svg", 
+    "technologies": ["React Native", "Three.js", "Firebase", "Node.js", "Stripe"],
+    "demoLink": "https://pizzaverse.prakhardoneria.com",
+    "githubLink": "https://github.com/prakhardoneria/pizzaverse"
   }
 ]

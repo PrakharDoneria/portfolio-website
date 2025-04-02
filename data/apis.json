@@ -1,58 +1,89 @@
 [
   {
     "platform": "RapidAPI",
-    "description": "APIs published on RapidAPI, the world's largest API marketplace.",
+    "description": "APIs published on RapidAPI marketplace, serving thousands of developers worldwide with reliable data services.",
+    "logo": "fa-bolt",
+    "actionText": "View on RapidAPI",
+    "actionLink": "https://rapidapi.com/developer/prakhardoneria",
+    "actionColor": "#1D4371",
+    "borderColor": "#127FFF",
     "apis": [
       {
         "title": "Image Explainer API",
-        "description": "RESTful API coded in Node.js using Gemini Vision Pro to analyze and explain image content with detailed descriptions.",
-        "tags": ["AI", "Computer Vision", "Node.js"],
-        "borderColor": "#00d8ff"
+        "description": "Convert images into detailed textual descriptions using advanced computer vision and natural language processing.",
+        "tags": ["AI", "Vision", "NLP", "Accessibility"],
+        "borderColor": "#127FFF"
       },
       {
         "title": "VRINDA AI API",
-        "description": "Integration API for VRINDA AI, an NLM trained by senior cybersecurity expert Navneet Singh. Used for creating an Android app version of the AI.",
-        "tags": ["AI", "NLP", "Flutter"],
-        "borderColor": "#00d8ff"
+        "description": "Virtual Research INtelligent Data Assistant - Analyze research papers and extract key findings, methods, and conclusions.",
+        "tags": ["Research", "AI", "Text Analysis", "Academic"],
+        "borderColor": "#127FFF"
       },
       {
-        "title": "Git Manager for GitHub",
-        "description": "API for reading, writing, and appending repository content and Gists, or searching GitHub repositories efficiently.",
-        "tags": ["Python", "Flask", "GitHub"],
-        "borderColor": "#00d8ff"
+        "title": "Git Manager",
+        "description": "Programmatically manage Git repositories, analyze code metrics, and automate code reviews.",
+        "tags": ["DevOps", "Git", "Automation", "Code Analysis"],
+        "borderColor": "#127FFF"
       }
-    ],
-    "actionText": "Explore on RapidAPI",
-    "actionLink": "https://rapidapi.com/yashdoneria/api/image-explainer/",
-    "actionColor": "#00d8ff",
-    "logo": "fa-bolt"
+    ]
   },
   {
-    "platform": "Custom API Solutions",
-    "description": "Specialized APIs built for custom applications and integration needs.",
+    "platform": "Apyflux",
+    "description": "Enterprise-grade APIs available on Apyflux, designed for high-performance applications and critical systems.",
+    "logo": "fa-network-wired",
+    "actionText": "Explore on Apyflux",
+    "actionLink": "https://apyflux.com/developer/prakhardoneria",
+    "actionColor": "#6633CC",
+    "borderColor": "#9933FF",
     "apis": [
       {
-        "title": "SunoSynth Music Generation",
-        "description": "Backend API for AI music generation with custom lyrics creation capabilities, used in both web and mobile applications.",
-        "tags": ["Node.js", "Python", "AI", "Music"],
-        "borderColor": "#bd00ff"
+        "title": "SecureAuth",
+        "description": "Comprehensive authentication and authorization system with OAuth, JWT, MFA, and biometric support.",
+        "tags": ["Security", "Authentication", "Identity", "Enterprise"],
+        "borderColor": "#9933FF"
       },
       {
-        "title": "HTML Editor PRO API",
-        "description": "API for real-time code collaboration, project sharing, and AI code generation features integrated into the HTML Editor PRO application.",
-        "tags": ["Node.js", "Firebase", "MongoDB"],
-        "borderColor": "#bd00ff"
+        "title": "DataSync",
+        "description": "Real-time data synchronization and conflict resolution for distributed applications and edge computing.",
+        "tags": ["Sync", "Real-time", "Distributed", "Edge"],
+        "borderColor": "#9933FF"
       },
       {
-        "title": "DevBytes News API",
-        "description": "News summarization API that condenses tech articles into 60-word summaries for quick consumption by developers and tech professionals.",
-        "tags": ["Google Gemini", "Python", "FastAPI"],
-        "borderColor": "#bd00ff"
+        "title": "LogHarvest",
+        "description": "Centralized logging infrastructure with advanced search, visualization, and anomaly detection features.",
+        "tags": ["Logging", "Monitoring", "Analytics", "Observability"],
+        "borderColor": "#9933FF"
       }
-    ],
-    "actionText": "Request API Integration",
-    "actionLink": "https://github.com/prakhardoneria",
-    "actionColor": "#bd00ff",
-    "logo": "fa-code"
+    ]
+  },
+  {
+    "platform": "Public APIs",
+    "description": "Free and open source APIs contributed to the developer community, with comprehensive documentation and examples.",
+    "logo": "fa-code-branch",
+    "actionText": "Browse Collection",
+    "actionLink": "https://github.com/prakhardoneria/public-apis",
+    "actionColor": "#28A745",
+    "borderColor": "#00CC66",
+    "apis": [
+      {
+        "title": "WebScrapeKit",
+        "description": "Turn any website into an API with intelligent data extraction, transformation, and structured output.",
+        "tags": ["Scraping", "Automation", "Data Extraction", "Open Source"],
+        "borderColor": "#00CC66"
+      },
+      {
+        "title": "WeatherPro",
+        "description": "Hyperlocal weather forecasting with historical data analysis and climate trend projections.",
+        "tags": ["Weather", "Forecasting", "Geolocation", "Time Series"],
+        "borderColor": "#00CC66"
+      },
+      {
+        "title": "FinInsight",
+        "description": "Financial data API with stock information, market trends, and sentiment analysis from news sources.",
+        "tags": ["Finance", "Stocks", "Analysis", "News"],
+        "borderColor": "#00CC66"
+      }
+    ]
   }
 ]

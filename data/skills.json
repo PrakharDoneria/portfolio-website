@@ -1,50 +1,50 @@
 [
   {
-    "title": "Web Development",
-    "icon": "fa-globe",
-    "iconColor": "#00d8ff",
+    "title": "Languages & Frameworks",
+    "icon": "fa-code",
+    "iconColor": "#6C63FF",
     "skills": [
-      { "name": "HTML/CSS", "percentage": 95 },
-      { "name": "JavaScript", "percentage": 90 },
+      { "name": "JavaScript", "percentage": 95 },
+      { "name": "Python", "percentage": 90 },
       { "name": "React", "percentage": 85 },
-      { "name": "Node.js", "percentage": 80 },
-      { "name": "PHP", "percentage": 75 }
+      { "name": "Node.js", "percentage": 88 },
+      { "name": "HTML/CSS", "percentage": 92 }
     ]
   },
   {
     "title": "App Development",
     "icon": "fa-mobile-alt",
-    "iconColor": "#bd00ff",
+    "iconColor": "#FF6584",
     "skills": [
-      { "name": "React Native", "percentage": 85 },
-      { "name": "Flutter", "percentage": 80 },
-      { "name": "Kotlin", "percentage": 75 },
-      { "name": "Swift", "percentage": 70 },
-      { "name": "Xamarin", "percentage": 65 }
+      { "name": "React Native", "percentage": 82 },
+      { "name": "Flutter", "percentage": 75 },
+      { "name": "iOS Development", "percentage": 70 },
+      { "name": "Android Development", "percentage": 72 },
+      { "name": "UI/UX Design", "percentage": 80 }
     ]
   },
   {
-    "title": "Artificial Intelligence",
+    "title": "AI & ML",
     "icon": "fa-brain",
-    "iconColor": "#00ffaa",
+    "iconColor": "#43CBFF",
     "skills": [
-      { "name": "Python", "percentage": 90 },
-      { "name": "TensorFlow", "percentage": 85 },
-      { "name": "PyTorch", "percentage": 80 },
-      { "name": "NLP", "percentage": 75 },
-      { "name": "Computer Vision", "percentage": 70 }
+      { "name": "TensorFlow", "percentage": 75 },
+      { "name": "Natural Language Processing", "percentage": 80 },
+      { "name": "Computer Vision", "percentage": 70 },
+      { "name": "Machine Learning", "percentage": 78 },
+      { "name": "Data Science", "percentage": 75 }
     ]
   },
   {
-    "title": "Database & API",
-    "icon": "fa-database",
-    "iconColor": "#ff5e00",
+    "title": "Backend & Infrastructure",
+    "icon": "fa-server",
+    "iconColor": "#F8A978",
     "skills": [
-      { "name": "SQL", "percentage": 90 },
+      { "name": "AWS", "percentage": 82 },
       { "name": "MongoDB", "percentage": 85 },
-      { "name": "GraphQL", "percentage": 80 },
-      { "name": "REST API", "percentage": 85 },
-      { "name": "Firebase", "percentage": 75 }
+      { "name": "PostgreSQL", "percentage": 80 },
+      { "name": "Docker", "percentage": 78 },
+      { "name": "RESTful API Design", "percentage": 90 }
     ]
   }
 ]

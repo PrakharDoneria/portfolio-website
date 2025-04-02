@@ -1,394 +1,176 @@
-// DOM Elements
-const navbar = document.getElementById('navbar');
-const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-const mobileMenu = document.querySelector('.mobile-menu');
-const closeBtn = document.querySelector('.close-btn');
-const mobileLinks = document.querySelectorAll('.mobile-link');
-const cursorDot = document.querySelector('.cursor-dot');
-const cursorOutline = document.querySelector('.cursor-outline');
-const skillsContainer = document.getElementById('skills-container');
-const projectsContainer = document.getElementById('projects-container');
-const apiPlatformsContainer = document.getElementById('api-platforms-container');
-const contactForm = document.getElementById('contact-form');
-
-// Cursor Movement
-document.addEventListener('mousemove', (e) => {
-  const posX = e.clientX;
-  const posY = e.clientY;
+// Main JavaScript file
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('Main script loaded');
   
-  // Cursor dot follows cursor exactly
-  cursorDot.style.left = `${posX}px`;
-  cursorDot.style.top = `${posY}px`;
-  
-  // Cursor outline follows with slight delay
-  cursorOutline.animate({
-    left: `${posX}px`,
-    top: `${posY}px`
-  }, { duration: 200, fill: 'forwards' });
+  // Set up event listeners and initialize site functionality
+  setupMobileMenu();
+  setupContactForm();
+  setupCustomCursor();
 });
 
-// Cursor effects on hover
-document.querySelectorAll('a, button, .btn, input, textarea, .close-btn, .mobile-menu-btn').forEach(item => {
-  item.addEventListener('mouseenter', () => {
-    cursorOutline.style.transform = 'translate(-50%, -50%) scale(1.5)';
-    cursorOutline.style.border = `2px solid var(--secondary)`;
-    cursorDot.style.transform = 'translate(-50%, -50%) scale(0.5)';
+// Mobile menu functionality
+function setupMobileMenu() {
+  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const closeBtn = document.querySelector('.mobile-menu .close-btn');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
+  
+  if (!mobileMenuBtn || !mobileMenu || !closeBtn) return;
+  
+  mobileMenuBtn.addEventListener('click', function() {
+    mobileMenu.classList.add('active');
+    document.body.style.overflow = 'hidden';
   });
   
-  item.addEventListener('mouseleave', () => {
-    cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
-    cursorOutline.style.border = `2px solid var(--secondary)`;
-    cursorDot.style.transform = 'translate(-50%, -50%) scale(1)';
+  closeBtn.addEventListener('click', function() {
+    mobileMenu.classList.remove('active');
+    document.body.style.overflow = 'auto';
   });
-});
-
-// Navbar Scrolling Effect
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-});
-
-// Mobile Menu Toggle
-mobileMenuBtn.addEventListener('click', () => {
-  mobileMenu.classList.add('open');
-});
-
-closeBtn.addEventListener('click', () => {
-  mobileMenu.classList.remove('open');
-});
-
-// Close mobile menu when a link is clicked
-mobileLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
+  
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      mobileMenu.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    });
   });
-});
-
-// Load Skills from JSON
-async function loadSkills() {
-  try {
-    const response = await fetch('data/skills.json');
-    const skillsData = await response.json();
-    
-    skillsData.forEach((category, index) => {
-      const delay = index * 200;
-      
-      const categoryEl = document.createElement('div');
-      categoryEl.classList.add('skill-category', 'glass-card');
-      categoryEl.style.animation = `fadeInUp 0.5s ease forwards ${delay}ms`;
-      categoryEl.style.opacity = '0';
-      categoryEl.style.borderLeft = `5px solid ${category.iconColor}`;
-      
-      categoryEl.innerHTML = `
-        <div class="category-header">
-          <div class="category-icon" style="background-color: ${category.iconColor}20; color: ${category.iconColor}">
-            <i class="fas ${category.icon}"></i>
-          </div>
-          <h3 class="category-title">${category.title}</h3>
-        </div>
-        <div class="category-skills">
-          ${category.skills.map((skill, skillIndex) => `
-            <div class="skill-item" data-delay="${delay + (skillIndex * 100)}">
-              <div class="skill-info">
-                <span class="skill-name">${skill.name}</span>
-                <span class="skill-percentage">${skill.percentage}%</span>
-              </div>
-              <div class="skill-progress">
-                <div class="skill-bar" data-percentage="${skill.percentage}"></div>
-              </div>
-            </div>
-          `).join('')}
-        </div>
-      `;
-      
-      skillsContainer.appendChild(categoryEl);
-    });
-    
-    // Animate skill bars when section comes into view
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const skillBars = entry.target.querySelectorAll('.skill-bar');
-          skillBars.forEach(bar => {
-            const percentage = bar.getAttribute('data-percentage');
-            bar.style.width = `${percentage}%`;
-          });
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.5 });
-    
-    observer.observe(document.getElementById('skills'));
-    
-  } catch (error) {
-    console.error('Error loading skills:', error);
-    skillsContainer.innerHTML = '<p class="error-message">Failed to load skills data.</p>';
-  }
 }
 
-// Load Projects from JSON
-async function loadProjects() {
-  try {
-    console.log('Loading projects...');
-    const response = await fetch('data/projects.json');
-    console.log('Projects fetch response status:', response.status);
-    
-    if (!response.ok) {
-      throw new Error(`Failed to fetch projects: ${response.status} ${response.statusText}`);
-    }
-    
-    const projectsData = await response.json();
-    console.log('Projects data loaded:', projectsData);
-    console.log('Number of projects:', projectsData.length);
-    
-    if (!projectsContainer) {
-      console.error('Projects container is null or undefined!');
-      return;
-    }
-    
-    // Clear any existing content
-    projectsContainer.innerHTML = '';
-    
-    projectsData.forEach((project, index) => {
-      console.log(`Processing project ${index + 1}:`, project.title);
-      const delay = index * 200;
-      
-      const projectEl = document.createElement('div');
-      projectEl.classList.add('project-card');
-      
-      // Set initial styles and animation
-      projectEl.style.animation = `fadeInUp 0.5s ease forwards ${delay}ms`;
-      
-      projectEl.innerHTML = `
-        <div class="card-inner">
-          <div class="card-front" style="background-image: url('${project.image}')">
-            <h3 class="project-title-overlay">${project.title}</h3>
-          </div>
-          <div class="card-back glass-card">
-            <div>
-              <h3 class="project-title">${project.title}</h3>
-              <p class="project-description">${project.description}</p>
-              <div class="project-tech">
-                ${project.technologies.slice(0, 5).map(tech => `
-                  <span class="tech-tag">${tech}</span>
-                `).join('')}
-                ${project.technologies.length > 5 ? `<span class="tech-tag">+${project.technologies.length - 5} more</span>` : ''}
-              </div>
-            </div>
-            <div class="project-links">
-              <a href="${project.demoLink}" target="_blank" class="btn btn-primary">Live Demo</a>
-              <a href="${project.githubLink}" target="_blank" class="btn btn-outline">GitHub</a>
-            </div>
-          </div>
-        </div>
-      `;
-      
-      projectsContainer.appendChild(projectEl);
-      console.log(`Added project ${index + 1} to DOM`);
-    });
-    
-    console.log('All projects loaded successfully');
-    
-  } catch (error) {
-    console.error('Error loading projects:', error);
-    if (projectsContainer) {
-      projectsContainer.innerHTML = '<p class="error-message">Failed to load projects data.</p>';
-    }
-  }
-}
-
-// Load API Showcases from JSON
-async function loadAPIs() {
-  try {
-    const response = await fetch('data/apis.json');
-    const apisData = await response.json();
-    
-    apisData.forEach((platform, index) => {
-      const delay = index * 300;
-      
-      const platformEl = document.createElement('div');
-      platformEl.classList.add('api-platform', 'glass-card');
-      platformEl.style.animation = `fadeInUp 0.5s ease forwards ${delay}ms`;
-      platformEl.style.opacity = '0';
-      platformEl.style.borderLeftColor = platform.actionColor;
-      
-      platformEl.innerHTML = `
-        <div class="platform-header">
-          <div class="platform-logo" style="background-color: ${platform.actionColor}20; color: ${platform.actionColor}">
-            <i class="fas ${platform.logo}"></i>
-          </div>
-          <div class="platform-info">
-            <h3>${platform.platform}</h3>
-            <p>${platform.description}</p>
-            <div class="platform-action">
-              <a href="${platform.actionLink}" target="_blank" class="btn btn-outline" style="border-color: ${platform.actionColor}">
-                ${platform.actionText}
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="api-cards">
-          ${platform.apis.map((api, apiIndex) => `
-            <div class="api-card" style="border-left-color: ${api.borderColor}">
-              <h4>${api.title}</h4>
-              <p>${api.description}</p>
-              <div class="api-tags">
-                ${api.tags.map(tag => `
-                  <span class="api-tag">${tag}</span>
-                `).join('')}
-              </div>
-            </div>
-          `).join('')}
-        </div>
-      `;
-      
-      apiPlatformsContainer.appendChild(platformEl);
-    });
-    
-  } catch (error) {
-    console.error('Error loading APIs:', error);
-    apiPlatformsContainer.innerHTML = '<p class="error-message">Failed to load API data.</p>';
-  }
-}
-
-// Contact Form Handling
-if (contactForm) {
+// Contact form handling
+function setupContactForm() {
+  const contactForm = document.getElementById('contact-form');
+  
+  if (!contactForm) return;
+  
   contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // Get form values
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const subject = document.getElementById('subject').value;
-    const message = document.getElementById('message').value;
+    // In a real implementation, this would send the form data to a server
+    // For now, we'll just show a success message
     
-    // Form validation
-    if (!name || !email || !subject || !message) {
-      alert('Please fill all fields');
-      return;
-    }
+    const formData = new FormData(contactForm);
+    let formValid = true;
     
-    // Here you would normally send the form data to your server
-    // For demonstration, we'll just show a success message
-    alert(`Thank you for your message, ${name}! I'll get back to you soon.`);
-    contactForm.reset();
-  });
-}
-
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  });
-});
-
-// Animation for sections as they come into view
-function setupAnimations() {
-  const animElements = document.querySelectorAll('.animate-on-scroll');
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animated');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  
-  animElements.forEach(element => {
-    observer.observe(element);
-  });
-}
-
-// Add fadeIn animations
-function addFadeInAnimations() {
-  // Define the CSS for fade-in animations
-  const style = document.createElement('style');
-  style.textContent = `
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
+    // Simple validation
+    for (const [key, value] of formData.entries()) {
+      if (!value.trim()) {
+        formValid = false;
+        break;
       }
     }
     
-    .animated {
-      animation: fadeInUp 0.5s ease forwards;
+    if (formValid) {
+      // For demo purposes, show a success message
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      
+      submitBtn.textContent = 'Message Sent!';
+      submitBtn.classList.add('success');
+      
+      setTimeout(() => {
+        submitBtn.textContent = originalText;
+        submitBtn.classList.remove('success');
+        contactForm.reset();
+      }, 3000);
     }
-  `;
-  document.head.appendChild(style);
-  
-  // Add animation class to section headers
-  document.querySelectorAll('.section-header').forEach(header => {
-    header.classList.add('animate-on-scroll');
   });
 }
 
-// Initialize
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('DOM Content Loaded');
+// Custom cursor
+function setupCustomCursor() {
+  const cursorDot = document.querySelector('.cursor-dot');
+  const cursorOutline = document.querySelector('.cursor-outline');
   
-  // Check if DOM elements exist
-  console.log('Skills container exists:', !!skillsContainer);
-  console.log('Projects container exists:', !!projectsContainer);
-  console.log('API platforms container exists:', !!apiPlatformsContainer);
+  if (!cursorDot || !cursorOutline) return;
   
-  // Load data
-  loadSkills();
-  loadProjects();
-  loadAPIs();
-  addFadeInAnimations();
-  setupAnimations();
+  let mouseX = 0;
+  let mouseY = 0;
+  let dotX = 0;
+  let dotY = 0;
+  let outlineX = 0;
+  let outlineY = 0;
   
-  // Log project container
-  if (projectsContainer) {
-    console.log('Projects container ID:', projectsContainer.id);
-    console.log('Projects container HTML before loading:', projectsContainer.innerHTML);
-  } else {
-    console.error('Projects container not found in the DOM!');
+  document.addEventListener('mousemove', function(e) {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    
+    // Add hover effect on interactive elements
+    const target = e.target;
+    if (
+      target.tagName.toLowerCase() === 'a' || 
+      target.tagName.toLowerCase() === 'button' ||
+      target.classList.contains('project-card') ||
+      target.closest('.project-card') ||
+      target.closest('a') ||
+      target.closest('button')
+    ) {
+      cursorOutline.classList.add('hover');
+    } else {
+      cursorOutline.classList.remove('hover');
+    }
+  });
+  
+  // Hide cursor when leaving the window
+  document.addEventListener('mouseout', function(e) {
+    if (e.relatedTarget === null) {
+      cursorDot.style.opacity = '0';
+      cursorOutline.style.opacity = '0';
+    }
+  });
+  
+  document.addEventListener('mouseover', function() {
+    cursorDot.style.opacity = '1';
+    cursorOutline.style.opacity = '1';
+  });
+  
+  // Smooth cursor movement
+  function updateCursor() {
+    // Smooth follow effect
+    dotX += (mouseX - dotX) * 0.8;
+    dotY += (mouseY - dotY) * 0.8;
+    outlineX += (mouseX - outlineX) * 0.3;
+    outlineY += (mouseY - outlineY) * 0.3;
+    
+    cursorDot.style.transform = `translate(${dotX}px, ${dotY}px)`;
+    cursorOutline.style.transform = `translate(${outlineX}px, ${outlineY}px)`;
+    
+    requestAnimationFrame(updateCursor);
   }
   
-  // Handle missing images with default gradient background
-  document.querySelectorAll('.card-front').forEach(card => {
-    const bgImage = card.style.backgroundImage;
-    if (!bgImage || bgImage.includes('project1.jpg') || bgImage.includes('project2.jpg') || 
-        bgImage.includes('project3.jpg') || bgImage.includes('project4.jpg')) {
-      card.style.backgroundColor = '#121212';
-      card.style.backgroundImage = 'linear-gradient(45deg, #bd00ff30, #00d8ff30)';
-      
-      // Add a project icon to the center
-      const iconElement = document.createElement('i');
-      iconElement.className = 'fas fa-code';
-      iconElement.style.position = 'absolute';
-      iconElement.style.top = '50%';
-      iconElement.style.left = '50%';
-      iconElement.style.transform = 'translate(-50%, -50%)';
-      iconElement.style.fontSize = '3rem';
-      iconElement.style.color = '#ffffff80';
-      card.appendChild(iconElement);
-    }
+  updateCursor();
+  
+  // Add click animation
+  document.addEventListener('mousedown', function() {
+    cursorDot.classList.add('click');
+    cursorOutline.classList.add('click');
   });
   
-  // After loading projects, check if they were added
-  setTimeout(() => {
-    if (projectsContainer) {
-      console.log('Projects container HTML after loading:', projectsContainer.innerHTML);
-      console.log('Number of projects:', projectsContainer.children.length);
-    }
-  }, 1000);
+  document.addEventListener('mouseup', function() {
+    cursorDot.classList.remove('click');
+    cursorOutline.classList.remove('click');
+  });
+}
+
+// Navbar visibility on scroll
+let lastScrollTop = 0;
+const navbar = document.getElementById('navbar');
+
+window.addEventListener('scroll', function() {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+  if (scrollTop > lastScrollTop && scrollTop > 150) {
+    // Scrolling down & not at the top
+    navbar.classList.add('hidden');
+  } else {
+    // Scrolling up or at the top
+    navbar.classList.remove('hidden');
+  }
+  
+  lastScrollTop = scrollTop;
+  
+  // Add solid background when not at the top
+  if (scrollTop > 50) {
+    navbar.classList.add('solid');
+  } else {
+    navbar.classList.remove('solid');
+  }
 });
