@@ -196,4 +196,3 @@ If you have APIs you've published, edit the `data/apis.json` file:
 - Vanilla JavaScript
 - Three.js for 3D effects
 - Font Awesome for icons
-- 
