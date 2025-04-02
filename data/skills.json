@@ -36,15 +36,15 @@
     ]
   },
   {
-    "title": "DevOps & Cloud",
-    "icon": "fa-server",
+    "title": "Database & API",
+    "icon": "fa-database",
     "iconColor": "#ff5e00",
     "skills": [
-      { "name": "Docker", "percentage": 85 },
-      { "name": "Kubernetes", "percentage": 80 },
-      { "name": "AWS", "percentage": 75 },
-      { "name": "GCP", "percentage": 70 },
-      { "name": "Azure", "percentage": 65 }
+      { "name": "SQL", "percentage": 90 },
+      { "name": "MongoDB", "percentage": 85 },
+      { "name": "GraphQL", "percentage": 80 },
+      { "name": "REST API", "percentage": 85 },
+      { "name": "Firebase", "percentage": 75 }
     ]
   }
 ]

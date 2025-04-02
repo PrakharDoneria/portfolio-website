@@ -3,7 +3,7 @@
     "title": "AI-Powered Financial Analysis",
     "description": "Developed a machine learning platform that analyzes financial data to predict market trends with 92% accuracy. Used Python, TensorFlow, and React for the user interface.",
     "image": "assets/images/project-finance.svg",
-    "technologies": ["Python", "TensorFlow", "Flask", "React", "AWS"],
+    "technologies": ["Python", "TensorFlow", "Flask", "React"],
     "demoLink": "https://github.com/prakhardoneria",
     "githubLink": "https://github.com/prakhardoneria"
   },
@@ -16,10 +16,10 @@
     "githubLink": "https://github.com/prakhardoneria"
   },
   {
-    "title": "E-Commerce Microservices",
-    "description": "Designed and implemented a microservices architecture for e-commerce platforms that improved scalability and reduced server load by 60%. Built with Node.js, Docker, and Kubernetes.",
+    "title": "E-Commerce Platform",
+    "description": "Designed and implemented a modern e-commerce platform with real-time inventory management, secure payment processing, and personalized user experiences.",
     "image": "assets/images/project-ecommerce.svg",
-    "technologies": ["Node.js", "Docker", "Kubernetes", "MongoDB", "Redis"],
+    "technologies": ["Node.js", "React", "MongoDB", "Redis", "Stripe API"],
     "demoLink": "https://github.com/prakhardoneria",
     "githubLink": "https://github.com/prakhardoneria"
   },
@@ -27,7 +27,23 @@
     "title": "Healthcare Data Platform",
     "description": "Built a HIPAA-compliant platform for healthcare providers to securely share and analyze patient data across institutions. Used Python, Django, and React.",
     "image": "assets/images/project-healthcare.svg",
-    "technologies": ["Python", "Django", "React", "PostgreSQL", "AWS"],
+    "technologies": ["Python", "Django", "React", "PostgreSQL"],
+    "demoLink": "https://github.com/prakhardoneria",
+    "githubLink": "https://github.com/prakhardoneria"
+  },
+  {
+    "title": "Neural Art Generator",
+    "description": "Created an AI-powered art generation tool that uses neural style transfer to create unique artwork. Users can upload a content image and a style image to produce stunning artistic results.",
+    "image": "assets/images/project-finance.svg",
+    "technologies": ["Python", "TensorFlow", "Flask", "JavaScript", "Canvas API"],
+    "demoLink": "https://github.com/prakhardoneria",
+    "githubLink": "https://github.com/prakhardoneria"
+  },
+  {
+    "title": "Smart Home Automation",
+    "description": "Developed a comprehensive smart home system that integrates various IoT devices under a single, easy-to-use interface. Features include voice control, scheduling, and energy usage monitoring.",
+    "image": "assets/images/project-blockchain.svg",
+    "technologies": ["JavaScript", "Node.js", "React", "MQTT", "IoT Protocols"],
     "demoLink": "https://github.com/prakhardoneria",
     "githubLink": "https://github.com/prakhardoneria"
   }
