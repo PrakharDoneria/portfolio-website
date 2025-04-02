@@ -132,10 +132,28 @@ async function loadSkills() {
 // Load Projects from JSON
 async function loadProjects() {
   try {
+    console.log('Loading projects...');
     const response = await fetch('data/projects.json');
+    console.log('Projects fetch response status:', response.status);
+    
+    if (!response.ok) {
+      throw new Error(`Failed to fetch projects: ${response.status} ${response.statusText}`);
+    }
+    
     const projectsData = await response.json();
+    console.log('Projects data loaded:', projectsData);
+    console.log('Number of projects:', projectsData.length);
+    
+    if (!projectsContainer) {
+      console.error('Projects container is null or undefined!');
+      return;
+    }
+    
+    // Clear any existing content
+    projectsContainer.innerHTML = '';
     
     projectsData.forEach((project, index) => {
+      console.log(`Processing project ${index + 1}:`, project.title);
       const delay = index * 200;
       
       const projectEl = document.createElement('div');
@@ -165,11 +183,16 @@ async function loadProjects() {
       `;
       
       projectsContainer.appendChild(projectEl);
+      console.log(`Added project ${index + 1} to DOM`);
     });
+    
+    console.log('All projects loaded successfully');
     
   } catch (error) {
     console.error('Error loading projects:', error);
-    projectsContainer.innerHTML = '<p class="error-message">Failed to load projects data.</p>';
+    if (projectsContainer) {
+      projectsContainer.innerHTML = '<p class="error-message">Failed to load projects data.</p>';
+    }
   }
 }
 
@@ -314,11 +337,27 @@ function addFadeInAnimations() {
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('DOM Content Loaded');
+  
+  // Check if DOM elements exist
+  console.log('Skills container exists:', !!skillsContainer);
+  console.log('Projects container exists:', !!projectsContainer);
+  console.log('API platforms container exists:', !!apiPlatformsContainer);
+  
+  // Load data
   loadSkills();
   loadProjects();
   loadAPIs();
   addFadeInAnimations();
   setupAnimations();
+  
+  // Log project container
+  if (projectsContainer) {
+    console.log('Projects container ID:', projectsContainer.id);
+    console.log('Projects container HTML before loading:', projectsContainer.innerHTML);
+  } else {
+    console.error('Projects container not found in the DOM!');
+  }
   
   // Handle missing images with default gradient background
   document.querySelectorAll('.card-front').forEach(card => {
@@ -340,4 +379,12 @@ document.addEventListener('DOMContentLoaded', () => {
       card.appendChild(iconElement);
     }
   });
+  
+  // After loading projects, check if they were added
+  setTimeout(() => {
+    if (projectsContainer) {
+      console.log('Projects container HTML after loading:', projectsContainer.innerHTML);
+      console.log('Number of projects:', projectsContainer.children.length);
+    }
+  }, 1000);
 });
